@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ACC7129722799391002C1471 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7129622799391002C1471 /* AppDelegate.swift */; };
+		ACC7129922799391002C1471 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7129822799391002C1471 /* ViewController.swift */; };
+		ACC7129B22799393002C1471 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC7129A22799393002C1471 /* Assets.xcassets */; };
+		ACC7129E22799393002C1471 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC7129C22799393002C1471 /* Main.storyboard */; };
+		ACC712AA22799393002C1471 /* YCC_ManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC712A922799393002C1471 /* YCC_ManagerTests.swift */; };
+		ACC712B522799393002C1471 /* YCC_ManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC712B422799393002C1471 /* YCC_ManagerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ACC712A622799393002C1471 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACC7128B22799391002C1471 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACC7129222799391002C1471;
+			remoteInfo = "YCC Manager";
+		};
+		ACC712B122799393002C1471 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACC7128B22799391002C1471 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACC7129222799391002C1471;
+			remoteInfo = "YCC Manager";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ACC7129322799391002C1471 /* YCC Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YCC Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC7129622799391002C1471 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ACC7129822799391002C1471 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACC7129A22799393002C1471 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ACC7129D22799393002C1471 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ACC7129F22799393002C1471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACC712A022799393002C1471 /* YCC_Manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YCC_Manager.entitlements; sourceTree = "<group>"; };
+		ACC712A522799393002C1471 /* YCC ManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YCC ManagerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC712A922799393002C1471 /* YCC_ManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCC_ManagerTests.swift; sourceTree = "<group>"; };
+		ACC712AB22799393002C1471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACC712B022799393002C1471 /* YCC ManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YCC ManagerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC712B422799393002C1471 /* YCC_ManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCC_ManagerUITests.swift; sourceTree = "<group>"; };
+		ACC712B622799393002C1471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACC7129022799391002C1471 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACC712A222799393002C1471 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACC712AD22799393002C1471 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ACC7128A22799391002C1471 = {
+			isa = PBXGroup;
+			children = (
+				ACC7129522799391002C1471 /* YCC Manager */,
+				ACC712A822799393002C1471 /* YCC ManagerTests */,
+				ACC712B322799393002C1471 /* YCC ManagerUITests */,
+				ACC7129422799391002C1471 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ACC7129422799391002C1471 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACC7129322799391002C1471 /* YCC Manager.app */,
+				ACC712A522799393002C1471 /* YCC ManagerTests.xctest */,
+				ACC712B022799393002C1471 /* YCC ManagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACC7129522799391002C1471 /* YCC Manager */ = {
+			isa = PBXGroup;
+			children = (
+				ACC7129622799391002C1471 /* AppDelegate.swift */,
+				ACC7129822799391002C1471 /* ViewController.swift */,
+				ACC7129A22799393002C1471 /* Assets.xcassets */,
+				ACC7129C22799393002C1471 /* Main.storyboard */,
+				ACC7129F22799393002C1471 /* Info.plist */,
+				ACC712A022799393002C1471 /* YCC_Manager.entitlements */,
+			);
+			path = "YCC Manager";
+			sourceTree = "<group>";
+		};
+		ACC712A822799393002C1471 /* YCC ManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				ACC712A922799393002C1471 /* YCC_ManagerTests.swift */,
+				ACC712AB22799393002C1471 /* Info.plist */,
+			);
+			path = "YCC ManagerTests";
+			sourceTree = "<group>";
+		};
+		ACC712B322799393002C1471 /* YCC ManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ACC712B422799393002C1471 /* YCC_ManagerUITests.swift */,
+				ACC712B622799393002C1471 /* Info.plist */,
+			);
+			path = "YCC ManagerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ACC7129222799391002C1471 /* YCC Manager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACC712B922799393002C1471 /* Build configuration list for PBXNativeTarget "YCC Manager" */;
+			buildPhases = (
+				ACC7128F22799391002C1471 /* Sources */,
+				ACC7129022799391002C1471 /* Frameworks */,
+				ACC7129122799391002C1471 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "YCC Manager";
+			productName = "YCC Manager";
+			productReference = ACC7129322799391002C1471 /* YCC Manager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ACC712A422799393002C1471 /* YCC ManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACC712BC22799393002C1471 /* Build configuration list for PBXNativeTarget "YCC ManagerTests" */;
+			buildPhases = (
+				ACC712A122799393002C1471 /* Sources */,
+				ACC712A222799393002C1471 /* Frameworks */,
+				ACC712A322799393002C1471 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACC712A722799393002C1471 /* PBXTargetDependency */,
+			);
+			name = "YCC ManagerTests";
+			productName = "YCC ManagerTests";
+			productReference = ACC712A522799393002C1471 /* YCC ManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ACC712AF22799393002C1471 /* YCC ManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACC712BF22799393002C1471 /* Build configuration list for PBXNativeTarget "YCC ManagerUITests" */;
+			buildPhases = (
+				ACC712AC22799393002C1471 /* Sources */,
+				ACC712AD22799393002C1471 /* Frameworks */,
+				ACC712AE22799393002C1471 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACC712B222799393002C1471 /* PBXTargetDependency */,
+			);
+			name = "YCC ManagerUITests";
+			productName = "YCC ManagerUITests";
+			productReference = ACC712B022799393002C1471 /* YCC ManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ACC7128B22799391002C1471 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Vikram Raj Gopinathan";
+				TargetAttributes = {
+					ACC7129222799391002C1471 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					ACC712A422799393002C1471 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = ACC7129222799391002C1471;
+					};
+					ACC712AF22799393002C1471 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = ACC7129222799391002C1471;
+					};
+				};
+			};
+			buildConfigurationList = ACC7128E22799391002C1471 /* Build configuration list for PBXProject "YCC Manager" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ACC7128A22799391002C1471;
+			productRefGroup = ACC7129422799391002C1471 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACC7129222799391002C1471 /* YCC Manager */,
+				ACC712A422799393002C1471 /* YCC ManagerTests */,
+				ACC712AF22799393002C1471 /* YCC ManagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACC7129122799391002C1471 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC7129B22799393002C1471 /* Assets.xcassets in Resources */,
+				ACC7129E22799393002C1471 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACC712A322799393002C1471 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACC712AE22799393002C1471 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACC7128F22799391002C1471 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC7129922799391002C1471 /* ViewController.swift in Sources */,
+				ACC7129722799391002C1471 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACC712A122799393002C1471 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC712AA22799393002C1471 /* YCC_ManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACC712AC22799393002C1471 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC712B522799393002C1471 /* YCC_ManagerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACC712A722799393002C1471 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACC7129222799391002C1471 /* YCC Manager */;
+			targetProxy = ACC712A622799393002C1471 /* PBXContainerItemProxy */;
+		};
+		ACC712B222799393002C1471 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACC7129222799391002C1471 /* YCC Manager */;
+			targetProxy = ACC712B122799393002C1471 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ACC7129C22799393002C1471 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACC7129D22799393002C1471 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ACC712B722799393002C1471 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ACC712B822799393002C1471 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		ACC712BA22799393002C1471 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "YCC Manager/YCC_Manager.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "YCC Manager/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kivi.YCC-Manager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		ACC712BB22799393002C1471 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "YCC Manager/YCC_Manager.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "YCC Manager/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kivi.YCC-Manager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		ACC712BD22799393002C1471 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "YCC ManagerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kivi.YCC-ManagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YCC Manager.app/Contents/MacOS/YCC Manager";
+			};
+			name = Debug;
+		};
+		ACC712BE22799393002C1471 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "YCC ManagerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kivi.YCC-ManagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YCC Manager.app/Contents/MacOS/YCC Manager";
+			};
+			name = Release;
+		};
+		ACC712C022799393002C1471 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "YCC ManagerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kivi.YCC-ManagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = "YCC Manager";
+			};
+			name = Debug;
+		};
+		ACC712C122799393002C1471 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "YCC ManagerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kivi.YCC-ManagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = "YCC Manager";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ACC7128E22799391002C1471 /* Build configuration list for PBXProject "YCC Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACC712B722799393002C1471 /* Debug */,
+				ACC712B822799393002C1471 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACC712B922799393002C1471 /* Build configuration list for PBXNativeTarget "YCC Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACC712BA22799393002C1471 /* Debug */,
+				ACC712BB22799393002C1471 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACC712BC22799393002C1471 /* Build configuration list for PBXNativeTarget "YCC ManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACC712BD22799393002C1471 /* Debug */,
+				ACC712BE22799393002C1471 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACC712BF22799393002C1471 /* Build configuration list for PBXNativeTarget "YCC ManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACC712C022799393002C1471 /* Debug */,
+				ACC712C122799393002C1471 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ACC7128B22799391002C1471 /* Project object */;
+}
