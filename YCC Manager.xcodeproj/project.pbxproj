@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC48E0232292DC4D0097D429 /* Priceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC48E0222292DC4D0097D429 /* Priceable.swift */; };
+		AC48E0272292DC9B0097D429 /* PriceableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC48E0262292DC9B0097D429 /* PriceableTests.swift */; };
 		ACC7129722799391002C1471 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7129622799391002C1471 /* AppDelegate.swift */; };
 		ACC7129922799391002C1471 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7129822799391002C1471 /* ViewController.swift */; };
 		ACC7129B22799393002C1471 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC7129A22799393002C1471 /* Assets.xcassets */; };
 		ACC7129E22799393002C1471 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC7129C22799393002C1471 /* Main.storyboard */; };
 		ACC712AA22799393002C1471 /* YCC_ManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC712A922799393002C1471 /* YCC_ManagerTests.swift */; };
 		ACC712B522799393002C1471 /* YCC_ManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC712B422799393002C1471 /* YCC_ManagerUITests.swift */; };
+		ACC712C3227993BC002C1471 /* ItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC712C2227993BC002C1471 /* ItemProtocol.swift */; };
+		ACF991C0229A4DCC00C40A04 /* ImagesStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF991BF229A4DCC00C40A04 /* ImagesStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC48E0222292DC4D0097D429 /* Priceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priceable.swift; sourceTree = "<group>"; };
+		AC48E0262292DC9B0097D429 /* PriceableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceableTests.swift; sourceTree = "<group>"; };
+		AC48E028229627370097D429 /* Ideas.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ideas.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		ACC7129322799391002C1471 /* YCC Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YCC Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC7129622799391002C1471 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACC7129822799391002C1471 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +53,8 @@
 		ACC712B022799393002C1471 /* YCC ManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YCC ManagerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC712B422799393002C1471 /* YCC_ManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCC_ManagerUITests.swift; sourceTree = "<group>"; };
 		ACC712B622799393002C1471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACC712C2227993BC002C1471 /* ItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemProtocol.swift; sourceTree = "<group>"; };
+		ACF991BF229A4DCC00C40A04 /* ImagesStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC9E84122291BFA100D1F076 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC48E0222292DC4D0097D429 /* Priceable.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC9E84152291BFEC00D1F076 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC48E0262292DC9B0097D429 /* PriceableTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		ACC7128A22799391002C1471 = {
 			isa = PBXGroup;
 			children = (
@@ -96,12 +121,16 @@
 		ACC7129522799391002C1471 /* YCC Manager */ = {
 			isa = PBXGroup;
 			children = (
+				ACF991BE229A4B2C00C40A04 /* Views */,
+				AC9E84122291BFA100D1F076 /* Models */,
 				ACC7129622799391002C1471 /* AppDelegate.swift */,
 				ACC7129822799391002C1471 /* ViewController.swift */,
 				ACC7129A22799393002C1471 /* Assets.xcassets */,
 				ACC7129C22799393002C1471 /* Main.storyboard */,
 				ACC7129F22799393002C1471 /* Info.plist */,
 				ACC712A022799393002C1471 /* YCC_Manager.entitlements */,
+				ACC712C2227993BC002C1471 /* ItemProtocol.swift */,
+				AC48E028229627370097D429 /* Ideas.playground */,
 			);
 			path = "YCC Manager";
 			sourceTree = "<group>";
@@ -109,6 +138,7 @@
 		ACC712A822799393002C1471 /* YCC ManagerTests */ = {
 			isa = PBXGroup;
 			children = (
+				AC9E84152291BFEC00D1F076 /* Models */,
 				ACC712A922799393002C1471 /* YCC_ManagerTests.swift */,
 				ACC712AB22799393002C1471 /* Info.plist */,
 			);
@@ -122,6 +152,14 @@
 				ACC712B622799393002C1471 /* Info.plist */,
 			);
 			path = "YCC ManagerUITests";
+			sourceTree = "<group>";
+		};
+		ACF991BE229A4B2C00C40A04 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ACF991BF229A4DCC00C40A04 /* ImagesStack.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +293,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACC7129922799391002C1471 /* ViewController.swift in Sources */,
+				AC48E0232292DC4D0097D429 /* Priceable.swift in Sources */,
+				ACF991C0229A4DCC00C40A04 /* ImagesStack.swift in Sources */,
 				ACC7129722799391002C1471 /* AppDelegate.swift in Sources */,
+				ACC712C3227993BC002C1471 /* ItemProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACC712AA22799393002C1471 /* YCC_ManagerTests.swift in Sources */,
+				AC48E0272292DC9B0097D429 /* PriceableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
