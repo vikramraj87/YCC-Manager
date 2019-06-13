@@ -94,6 +94,7 @@
 		AC48E0232292DC4D0097D429 /* Priceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC48E0222292DC4D0097D429 /* Priceable.swift */; };
 		AC48E0272292DC9B0097D429 /* PriceableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC48E0262292DC9B0097D429 /* PriceableTests.swift */; };
 		AC4C985A229B74D80081631C /* FilterableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C9859229B74D80081631C /* FilterableTableViewController.swift */; };
+		AC5D671022B2ACB300FB09E9 /* Array+removedElementsAtIndexes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5D670F22B2ACB300FB09E9 /* Array+removedElementsAtIndexes.swift */; };
 		AC6779D822B1CF2C00C902D9 /* ImageDownSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6779D722B1CF2C00C902D9 /* ImageDownSampler.swift */; };
 		AC6779DA22B1D03300C902D9 /* FileManager+contentsOfFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6779D922B1D03300C902D9 /* FileManager+contentsOfFolder.swift */; };
 		AC6779DC22B1D0F500C902D9 /* ImportItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6779DB22B1D0F500C902D9 /* ImportItemProtocol.swift */; };
@@ -213,6 +214,7 @@
 		AC48E0262292DC9B0097D429 /* PriceableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceableTests.swift; sourceTree = "<group>"; };
 		AC48E028229627370097D429 /* Ideas.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ideas.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		AC4C9859229B74D80081631C /* FilterableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterableTableViewController.swift; sourceTree = "<group>"; };
+		AC5D670F22B2ACB300FB09E9 /* Array+removedElementsAtIndexes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+removedElementsAtIndexes.swift"; sourceTree = "<group>"; };
 		AC6779D722B1CF2C00C902D9 /* ImageDownSampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownSampler.swift; sourceTree = "<group>"; };
 		AC6779D922B1D03300C902D9 /* FileManager+contentsOfFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+contentsOfFolder.swift"; sourceTree = "<group>"; };
 		AC6779DB22B1D0F500C902D9 /* ImportItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportItemProtocol.swift; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 			children = (
 				AC6779D722B1CF2C00C902D9 /* ImageDownSampler.swift */,
 				AC6779D922B1D03300C902D9 /* FileManager+contentsOfFolder.swift */,
+				AC5D670F22B2ACB300FB09E9 /* Array+removedElementsAtIndexes.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -698,6 +701,7 @@
 				AC3C8F7F22A5F1C600F95EDA /* SingleThumbnailItem.swift in Sources */,
 				ACC7129722799391002C1471 /* AppDelegate.swift in Sources */,
 				AC6779DA22B1D03300C902D9 /* FileManager+contentsOfFolder.swift in Sources */,
+				AC5D671022B2ACB300FB09E9 /* Array+removedElementsAtIndexes.swift in Sources */,
 				AC48A93B22A1F9C8000B3DD7 /* ImportViewController.swift in Sources */,
 				AC6779DC22B1D0F500C902D9 /* ImportItemProtocol.swift in Sources */,
 			);

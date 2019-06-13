@@ -813,6 +813,9 @@
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="removeImages:" target="SqZ-eZ-6kc" id="bI3-po-5cm"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -943,6 +946,7 @@
                     </view>
                     <connections>
                         <outlet property="mergeButton" destination="CQ5-ef-nfI" id="uw0-wL-yKk"/>
+                        <outlet property="removeItemsButton" destination="xg3-se-7Uy" id="agk-7L-FKR"/>
                         <outlet property="thumbnailView" destination="PzL-sR-tnr" id="3JE-iT-I9m"/>
                         <outlet property="unmergeButton" destination="KBW-52-jV0" id="bTS-OZ-oUv"/>
                     </connections>

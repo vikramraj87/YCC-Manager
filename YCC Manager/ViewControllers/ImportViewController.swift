@@ -24,14 +24,15 @@ class ImportViewController: NSViewController {
     @IBOutlet weak var thumbnailView: NSCollectionView!
     @IBOutlet weak var mergeButton: NSButton!
     @IBOutlet weak var unmergeButton: NSButton!
+    @IBOutlet weak var removeItemsButton: NSButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.wantsLayer = true
         
-        mergeButton.isEnabled = false
-        unmergeButton.isEnabled = false
+        validateMergeUnmerge()
+        validateRemoveItems()
         
         configure(thumbnailView)
     }
@@ -72,13 +73,7 @@ class ImportViewController: NSViewController {
         
         items[firstIndex.item].merge(with: itemsToMerge)
         
-        var newItems: [ImportItemProtocol] = []
-        for (index, item) in items.enumerated() {
-            if arrayIndexesToMerge.contains(index) != true {
-                newItems.append(item)
-            }
-        }
-        items = newItems
+        items = items.removedElementsAtIndexes(arrayIndexesToMerge)
         
         thumbnailView.deleteItems(at: Set(indexesToMerge))
         thumbnailView.reloadItems(at: Set([firstIndex]))
@@ -120,6 +115,13 @@ class ImportViewController: NSViewController {
     
     @IBAction func addImages(_ sender: Any) {
         importImages()
+    }
+    
+    @IBAction func removeImages(_ sender: Any) {
+        let selectedIndexpaths = thumbnailView.selectionIndexPaths
+        let arrayIndexes = selectedIndexpaths.map { return $0.item }
+        items = items.removedElementsAtIndexes(arrayIndexes)
+        thumbnailView.deleteItems(at: selectedIndexpaths)
     }
     
     private func importImages() {
@@ -174,6 +176,7 @@ extension ImportViewController: NSCollectionViewDataSource {
             return viewItem
         }
         
+        
         DispatchQueue.global(qos: .userInitiated).async {
             let downsizedImages = item.imageURLs.compactMap {
                 ImageDownSampler.downsample(imageAt: $0, to: 500)
@@ -191,15 +194,21 @@ extension ImportViewController: NSCollectionViewDelegate {
     // For validating merge and unmerge buttons
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
         validateMergeUnmerge()
+        validateRemoveItems()
     }
     
     func collectionView(_ collectionView: NSCollectionView, didDeselectItemsAt indexPaths: Set<IndexPath>) {
         validateMergeUnmerge()
+        validateRemoveItems()
     }
     
     private func validateMergeUnmerge() {
         unmergeButton.isEnabled = canUnmerge()
         mergeButton.isEnabled = canMerge()
+    }
+    
+    private func validateRemoveItems() {
+        removeItemsButton.isEnabled = !thumbnailView.selectionIndexPaths.isEmpty
     }
     
     private func canUnmerge() -> Bool {
@@ -226,3 +235,4 @@ extension ImportViewController: NSCollectionViewDelegate {
         return true
     }
 }
+
