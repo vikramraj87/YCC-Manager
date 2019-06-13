@@ -123,7 +123,6 @@ class ImportViewController: NSViewController {
     }
     
     private func importImages() {
-        // Show NSOpenPanel
         guard let window = view.window else {
             print("No window to present open panel")
             return
@@ -144,17 +143,19 @@ class ImportViewController: NSViewController {
     private func processSelectedURLs(_ urls: [URL]) {
         // TODO: Add extensions to UserDefaults
         let allowedExtensions = ["jpg", "jpeg"]
-        let filteredURLs =  urls.filter { url in
+        
+        let newItems =  urls.filter { url in // Filter valid extensions
             let fileExtension = url.pathExtension.lowercased()
             return allowedExtensions.contains(fileExtension)
-        }
-        let newItems = filteredURLs.map { ImportItem(imageURL: $0) }
+        }.filter { url in                    // Filter duplicates
+            for item in items {
+                if item.contains(url) { return false }
+            }
+            return true
+        }.map { ImportItem(imageURL: $0) }  // Convert URLs to Items
+        
         items.append(contentsOf: newItems)
         thumbnailView.reloadData()
-    }
-    
-    private func filterDuplicates(_ urls: [URL]) {
-        
     }
 }
 
@@ -197,7 +198,6 @@ extension ImportViewController: NSCollectionViewDelegate {
     }
     
     private func validateMergeUnmerge() {
-        print(thumbnailView.selectionIndexPaths.count)
         unmergeButton.isEnabled = canUnmerge()
         mergeButton.isEnabled = canMerge()
     }
