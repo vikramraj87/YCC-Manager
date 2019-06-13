@@ -15,12 +15,7 @@ public class ImagesStackView: NSView {
             applyRotation()
         }
     }
-    public var aspectRatio: Double = 1.3  {
-        didSet {
-            calculateFrames()
-        }
-    }
-    
+
     public var imageBorderWidth: CGFloat = 1.0 {
         didSet {
             applyBorder()
@@ -68,6 +63,11 @@ public class ImagesStackView: NSView {
     private let maxImages = 3
     private let padding: CGFloat = 1.0
     
+    private var aspectRatio: Double  {
+        if bounds.height == 0 { return 0 }
+        return Double(bounds.width / bounds.height)
+    }
+    
     // MARK: - Overriders
     public override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
@@ -79,10 +79,9 @@ public class ImagesStackView: NSView {
         configView()
     }
     
-    // TODO: Check whether super needs overriding or any better place exists for laying out layers
-    public override func layoutSubtreeIfNeeded() {
-        super.layoutSubtreeIfNeeded()
-        
+    // Resizes layers bounds when the view resizes
+    public override func layout() {
+        super.layout()
         configLayers()
     }
     
@@ -104,7 +103,7 @@ public class ImagesStackView: NSView {
     
     // MARK: - Layer configuring functions
     private func configLayers() {
-        // Reset the transformation when applied already so
+        // Reset the transformation applied already so
         // that the bounds can be calculated freshly
         imageLayers.forEach { imageLayer in
             imageLayer.transform = CATransform3DIdentity
@@ -114,11 +113,11 @@ public class ImagesStackView: NSView {
         applyBorder()
         applyShadow()
         applyRotation()
-        layer?.backgroundColor = NSColor.gray.cgColor
     }
     
     private func calculateFrames() {
         let height = heightOfImages()
+        let aspectRatio = bounds.width / bounds.height
         let width = CGFloat(aspectRatio) * height
         
         let dh = bounds.height - height
@@ -169,7 +168,6 @@ public class ImagesStackView: NSView {
         wantsLayer = true
         
         makeLayers()
-        configLayers()
         displayImages()
     }
     

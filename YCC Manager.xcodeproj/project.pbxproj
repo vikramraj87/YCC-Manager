@@ -7,15 +7,102 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC2F4ED5229CB7F800531EE4 /* dealers.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC2F4ED4229CB7F800531EE4 /* dealers.plist */; };
+		AC3C8F7F22A5F1C600F95EDA /* SingleThumbnailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3C8F7D22A5F1C600F95EDA /* SingleThumbnailItem.swift */; };
+		AC3C8F8022A5F1C600F95EDA /* SingleThumbnailItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC3C8F7E22A5F1C600F95EDA /* SingleThumbnailItem.xib */; };
+		AC3C8F8222A5F28E00F95EDA /* MultipleThumbnailPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3C8F8122A5F28E00F95EDA /* MultipleThumbnailPreviewViewController.swift */; };
+		AC48A8A0229D67C5000B3DD7 /* FilterableContentCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC48A89F229D67C5000B3DD7 /* FilterableContentCellView.swift */; };
+		AC48A8EE22A1F956000B3DD7 /* jewel63.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8A222A1F94B000B3DD7 /* jewel63.jpg */; };
+		AC48A8EF22A1F956000B3DD7 /* jewel66.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8A322A1F94B000B3DD7 /* jewel66.jpg */; };
+		AC48A8F022A1F956000B3DD7 /* jewel75.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8A422A1F94B000B3DD7 /* jewel75.jpg */; };
+		AC48A8F122A1F956000B3DD7 /* jewel65.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8A522A1F94B000B3DD7 /* jewel65.jpg */; };
+		AC48A8F222A1F956000B3DD7 /* jewel56.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8A622A1F94C000B3DD7 /* jewel56.jpg */; };
+		AC48A8F322A1F956000B3DD7 /* jewel44.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8A722A1F94C000B3DD7 /* jewel44.jpg */; };
+		AC48A8F422A1F956000B3DD7 /* jewel22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8A822A1F94C000B3DD7 /* jewel22.jpg */; };
+		AC48A8F522A1F956000B3DD7 /* jewel59.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8A922A1F94C000B3DD7 /* jewel59.jpg */; };
+		AC48A8F622A1F956000B3DD7 /* jewel76.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8AA22A1F94C000B3DD7 /* jewel76.jpg */; };
+		AC48A8F722A1F956000B3DD7 /* jewel64.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8AB22A1F94C000B3DD7 /* jewel64.jpg */; };
+		AC48A8F822A1F956000B3DD7 /* jewel18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8AC22A1F94C000B3DD7 /* jewel18.jpg */; };
+		AC48A8F922A1F956000B3DD7 /* jewel72.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8AD22A1F94C000B3DD7 /* jewel72.jpg */; };
+		AC48A8FA22A1F956000B3DD7 /* jewel35.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8AE22A1F94D000B3DD7 /* jewel35.jpg */; };
+		AC48A8FB22A1F956000B3DD7 /* jewel31.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8AF22A1F94D000B3DD7 /* jewel31.jpg */; };
+		AC48A8FC22A1F956000B3DD7 /* jewel45.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8B022A1F94D000B3DD7 /* jewel45.jpg */; };
+		AC48A8FD22A1F956000B3DD7 /* jewel55.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8B122A1F94D000B3DD7 /* jewel55.jpg */; };
+		AC48A8FE22A1F956000B3DD7 /* jewel54.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8B222A1F94D000B3DD7 /* jewel54.jpg */; };
+		AC48A8FF22A1F956000B3DD7 /* jewel46.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8B322A1F94D000B3DD7 /* jewel46.jpg */; };
+		AC48A90022A1F956000B3DD7 /* jewel61.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8B422A1F94D000B3DD7 /* jewel61.jpg */; };
+		AC48A90122A1F956000B3DD7 /* jewel7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8B522A1F94D000B3DD7 /* jewel7.jpg */; };
+		AC48A90222A1F956000B3DD7 /* jewel43.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8B622A1F94D000B3DD7 /* jewel43.jpg */; };
+		AC48A90322A1F956000B3DD7 /* jewel20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8B722A1F94E000B3DD7 /* jewel20.jpg */; };
+		AC48A90422A1F956000B3DD7 /* jewel47.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8B822A1F94E000B3DD7 /* jewel47.jpg */; };
+		AC48A90522A1F956000B3DD7 /* jewel34.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8B922A1F94E000B3DD7 /* jewel34.jpg */; };
+		AC48A90622A1F956000B3DD7 /* jewel68.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8BA22A1F94E000B3DD7 /* jewel68.jpg */; };
+		AC48A90722A1F956000B3DD7 /* jewel1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8BB22A1F94E000B3DD7 /* jewel1.jpg */; };
+		AC48A90822A1F956000B3DD7 /* jewel57.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8BC22A1F94E000B3DD7 /* jewel57.jpg */; };
+		AC48A90922A1F956000B3DD7 /* jewel12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8BD22A1F94E000B3DD7 /* jewel12.jpg */; };
+		AC48A90A22A1F956000B3DD7 /* jewel33.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8BE22A1F94E000B3DD7 /* jewel33.jpg */; };
+		AC48A90B22A1F956000B3DD7 /* jewel17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8BF22A1F94F000B3DD7 /* jewel17.jpg */; };
+		AC48A90C22A1F956000B3DD7 /* jewel41.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8C022A1F94F000B3DD7 /* jewel41.jpg */; };
+		AC48A90D22A1F956000B3DD7 /* jewel70.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8C122A1F94F000B3DD7 /* jewel70.jpg */; };
+		AC48A90E22A1F956000B3DD7 /* jewel71.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8C222A1F94F000B3DD7 /* jewel71.jpg */; };
+		AC48A90F22A1F956000B3DD7 /* jewel73.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8C322A1F94F000B3DD7 /* jewel73.jpg */; };
+		AC48A91022A1F956000B3DD7 /* jewel27.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8C422A1F94F000B3DD7 /* jewel27.jpg */; };
+		AC48A91122A1F956000B3DD7 /* jewel2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8C522A1F94F000B3DD7 /* jewel2.jpg */; };
+		AC48A91222A1F956000B3DD7 /* jewel15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8C622A1F94F000B3DD7 /* jewel15.jpg */; };
+		AC48A91322A1F956000B3DD7 /* jewel58.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8C722A1F94F000B3DD7 /* jewel58.jpg */; };
+		AC48A91422A1F956000B3DD7 /* jewel32.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8C822A1F950000B3DD7 /* jewel32.jpg */; };
+		AC48A91522A1F956000B3DD7 /* jewel5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8C922A1F950000B3DD7 /* jewel5.jpg */; };
+		AC48A91622A1F956000B3DD7 /* jewel3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8CA22A1F950000B3DD7 /* jewel3.jpg */; };
+		AC48A91722A1F956000B3DD7 /* jewel16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8CB22A1F950000B3DD7 /* jewel16.jpg */; };
+		AC48A91822A1F956000B3DD7 /* jewel28.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8CC22A1F950000B3DD7 /* jewel28.jpg */; };
+		AC48A91922A1F956000B3DD7 /* jewel42.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8CD22A1F950000B3DD7 /* jewel42.jpg */; };
+		AC48A91A22A1F956000B3DD7 /* jewel25.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8CE22A1F950000B3DD7 /* jewel25.jpg */; };
+		AC48A91B22A1F956000B3DD7 /* jewel52.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8CF22A1F951000B3DD7 /* jewel52.jpg */; };
+		AC48A91C22A1F956000B3DD7 /* jewel30.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8D022A1F951000B3DD7 /* jewel30.jpg */; };
+		AC48A91D22A1F956000B3DD7 /* jewel23.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8D122A1F951000B3DD7 /* jewel23.jpg */; };
+		AC48A91E22A1F956000B3DD7 /* jewel36.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8D222A1F951000B3DD7 /* jewel36.jpg */; };
+		AC48A91F22A1F956000B3DD7 /* jewel4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8D322A1F951000B3DD7 /* jewel4.jpg */; };
+		AC48A92022A1F956000B3DD7 /* jewel60.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8D422A1F951000B3DD7 /* jewel60.jpg */; };
+		AC48A92122A1F956000B3DD7 /* jewel8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8D522A1F951000B3DD7 /* jewel8.jpg */; };
+		AC48A92222A1F956000B3DD7 /* jewel50.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8D622A1F952000B3DD7 /* jewel50.jpg */; };
+		AC48A92322A1F956000B3DD7 /* jewel51.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8D722A1F952000B3DD7 /* jewel51.jpg */; };
+		AC48A92422A1F956000B3DD7 /* jewel24.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8D822A1F952000B3DD7 /* jewel24.jpg */; };
+		AC48A92522A1F956000B3DD7 /* jewel67.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8D922A1F952000B3DD7 /* jewel67.jpg */; };
+		AC48A92622A1F956000B3DD7 /* jewel38.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8DA22A1F952000B3DD7 /* jewel38.jpg */; };
+		AC48A92722A1F956000B3DD7 /* jewel37.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8DB22A1F952000B3DD7 /* jewel37.jpg */; };
+		AC48A92822A1F956000B3DD7 /* jewel6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8DC22A1F953000B3DD7 /* jewel6.jpg */; };
+		AC48A92922A1F956000B3DD7 /* jewel40.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8DD22A1F953000B3DD7 /* jewel40.jpg */; };
+		AC48A92A22A1F956000B3DD7 /* jewel10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8DE22A1F953000B3DD7 /* jewel10.jpg */; };
+		AC48A92B22A1F956000B3DD7 /* jewel13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8DF22A1F953000B3DD7 /* jewel13.jpg */; };
+		AC48A92C22A1F956000B3DD7 /* jewel26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8E022A1F953000B3DD7 /* jewel26.jpg */; };
+		AC48A92D22A1F956000B3DD7 /* jewel39.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8E122A1F953000B3DD7 /* jewel39.jpg */; };
+		AC48A92E22A1F956000B3DD7 /* jewel48.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8E222A1F954000B3DD7 /* jewel48.jpg */; };
+		AC48A92F22A1F956000B3DD7 /* jewel49.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8E322A1F954000B3DD7 /* jewel49.jpg */; };
+		AC48A93022A1F956000B3DD7 /* jewel62.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8E422A1F954000B3DD7 /* jewel62.jpg */; };
+		AC48A93122A1F956000B3DD7 /* jewel21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8E522A1F954000B3DD7 /* jewel21.jpg */; };
+		AC48A93222A1F956000B3DD7 /* jewel74.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8E622A1F954000B3DD7 /* jewel74.jpg */; };
+		AC48A93322A1F956000B3DD7 /* jewel69.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8E722A1F954000B3DD7 /* jewel69.jpg */; };
+		AC48A93422A1F956000B3DD7 /* jewel29.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8E822A1F954000B3DD7 /* jewel29.jpg */; };
+		AC48A93522A1F956000B3DD7 /* jewel19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8E922A1F955000B3DD7 /* jewel19.jpg */; };
+		AC48A93622A1F956000B3DD7 /* jewel9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8EA22A1F955000B3DD7 /* jewel9.jpg */; };
+		AC48A93722A1F956000B3DD7 /* jewel11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8EB22A1F955000B3DD7 /* jewel11.jpg */; };
+		AC48A93822A1F956000B3DD7 /* jewel53.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8EC22A1F955000B3DD7 /* jewel53.jpg */; };
+		AC48A93922A1F956000B3DD7 /* jewel14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC48A8ED22A1F955000B3DD7 /* jewel14.jpg */; };
+		AC48A93B22A1F9C8000B3DD7 /* ImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC48A93A22A1F9C8000B3DD7 /* ImportViewController.swift */; };
+		AC48A94222A1FC5E000B3DD7 /* MultipleThumbnailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC48A94022A1FC5E000B3DD7 /* MultipleThumbnailItem.swift */; };
+		AC48A94322A1FC5E000B3DD7 /* MultipleThumbnailItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC48A94122A1FC5E000B3DD7 /* MultipleThumbnailItem.xib */; };
 		AC48E0232292DC4D0097D429 /* Priceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC48E0222292DC4D0097D429 /* Priceable.swift */; };
 		AC48E0272292DC9B0097D429 /* PriceableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC48E0262292DC9B0097D429 /* PriceableTests.swift */; };
+		AC4C985A229B74D80081631C /* FilterableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C9859229B74D80081631C /* FilterableTableViewController.swift */; };
+		AC6779D822B1CF2C00C902D9 /* ImageDownSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6779D722B1CF2C00C902D9 /* ImageDownSampler.swift */; };
+		AC6779DA22B1D03300C902D9 /* FileManager+contentsOfFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6779D922B1D03300C902D9 /* FileManager+contentsOfFolder.swift */; };
+		AC6779DC22B1D0F500C902D9 /* ImportItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6779DB22B1D0F500C902D9 /* ImportItemProtocol.swift */; };
 		ACC7129722799391002C1471 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7129622799391002C1471 /* AppDelegate.swift */; };
 		ACC7129922799391002C1471 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7129822799391002C1471 /* ViewController.swift */; };
 		ACC7129B22799393002C1471 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC7129A22799393002C1471 /* Assets.xcassets */; };
 		ACC7129E22799393002C1471 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC7129C22799393002C1471 /* Main.storyboard */; };
 		ACC712AA22799393002C1471 /* YCC_ManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC712A922799393002C1471 /* YCC_ManagerTests.swift */; };
 		ACC712B522799393002C1471 /* YCC_ManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC712B422799393002C1471 /* YCC_ManagerUITests.swift */; };
-		ACC712C3227993BC002C1471 /* ItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC712C2227993BC002C1471 /* ItemProtocol.swift */; };
 		ACF991C0229A4DCC00C40A04 /* ImagesStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF991BF229A4DCC00C40A04 /* ImagesStack.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,9 +124,99 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC2BCF58229AEA9B0099E48F /* Filterable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Filterable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		AC2F4ED4229CB7F800531EE4 /* dealers.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = dealers.plist; sourceTree = "<group>"; };
+		AC3C8F7D22A5F1C600F95EDA /* SingleThumbnailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleThumbnailItem.swift; sourceTree = "<group>"; };
+		AC3C8F7E22A5F1C600F95EDA /* SingleThumbnailItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleThumbnailItem.xib; sourceTree = "<group>"; };
+		AC3C8F8122A5F28E00F95EDA /* MultipleThumbnailPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleThumbnailPreviewViewController.swift; sourceTree = "<group>"; };
+		AC48A89F229D67C5000B3DD7 /* FilterableContentCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterableContentCellView.swift; sourceTree = "<group>"; };
+		AC48A8A222A1F94B000B3DD7 /* jewel63.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel63.jpg; sourceTree = "<group>"; };
+		AC48A8A322A1F94B000B3DD7 /* jewel66.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel66.jpg; sourceTree = "<group>"; };
+		AC48A8A422A1F94B000B3DD7 /* jewel75.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel75.jpg; sourceTree = "<group>"; };
+		AC48A8A522A1F94B000B3DD7 /* jewel65.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel65.jpg; sourceTree = "<group>"; };
+		AC48A8A622A1F94C000B3DD7 /* jewel56.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel56.jpg; sourceTree = "<group>"; };
+		AC48A8A722A1F94C000B3DD7 /* jewel44.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel44.jpg; sourceTree = "<group>"; };
+		AC48A8A822A1F94C000B3DD7 /* jewel22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel22.jpg; sourceTree = "<group>"; };
+		AC48A8A922A1F94C000B3DD7 /* jewel59.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel59.jpg; sourceTree = "<group>"; };
+		AC48A8AA22A1F94C000B3DD7 /* jewel76.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel76.jpg; sourceTree = "<group>"; };
+		AC48A8AB22A1F94C000B3DD7 /* jewel64.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel64.jpg; sourceTree = "<group>"; };
+		AC48A8AC22A1F94C000B3DD7 /* jewel18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel18.jpg; sourceTree = "<group>"; };
+		AC48A8AD22A1F94C000B3DD7 /* jewel72.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel72.jpg; sourceTree = "<group>"; };
+		AC48A8AE22A1F94D000B3DD7 /* jewel35.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel35.jpg; sourceTree = "<group>"; };
+		AC48A8AF22A1F94D000B3DD7 /* jewel31.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel31.jpg; sourceTree = "<group>"; };
+		AC48A8B022A1F94D000B3DD7 /* jewel45.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel45.jpg; sourceTree = "<group>"; };
+		AC48A8B122A1F94D000B3DD7 /* jewel55.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel55.jpg; sourceTree = "<group>"; };
+		AC48A8B222A1F94D000B3DD7 /* jewel54.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel54.jpg; sourceTree = "<group>"; };
+		AC48A8B322A1F94D000B3DD7 /* jewel46.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel46.jpg; sourceTree = "<group>"; };
+		AC48A8B422A1F94D000B3DD7 /* jewel61.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel61.jpg; sourceTree = "<group>"; };
+		AC48A8B522A1F94D000B3DD7 /* jewel7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel7.jpg; sourceTree = "<group>"; };
+		AC48A8B622A1F94D000B3DD7 /* jewel43.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel43.jpg; sourceTree = "<group>"; };
+		AC48A8B722A1F94E000B3DD7 /* jewel20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel20.jpg; sourceTree = "<group>"; };
+		AC48A8B822A1F94E000B3DD7 /* jewel47.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel47.jpg; sourceTree = "<group>"; };
+		AC48A8B922A1F94E000B3DD7 /* jewel34.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel34.jpg; sourceTree = "<group>"; };
+		AC48A8BA22A1F94E000B3DD7 /* jewel68.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel68.jpg; sourceTree = "<group>"; };
+		AC48A8BB22A1F94E000B3DD7 /* jewel1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel1.jpg; sourceTree = "<group>"; };
+		AC48A8BC22A1F94E000B3DD7 /* jewel57.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel57.jpg; sourceTree = "<group>"; };
+		AC48A8BD22A1F94E000B3DD7 /* jewel12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel12.jpg; sourceTree = "<group>"; };
+		AC48A8BE22A1F94E000B3DD7 /* jewel33.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel33.jpg; sourceTree = "<group>"; };
+		AC48A8BF22A1F94F000B3DD7 /* jewel17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel17.jpg; sourceTree = "<group>"; };
+		AC48A8C022A1F94F000B3DD7 /* jewel41.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel41.jpg; sourceTree = "<group>"; };
+		AC48A8C122A1F94F000B3DD7 /* jewel70.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel70.jpg; sourceTree = "<group>"; };
+		AC48A8C222A1F94F000B3DD7 /* jewel71.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel71.jpg; sourceTree = "<group>"; };
+		AC48A8C322A1F94F000B3DD7 /* jewel73.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel73.jpg; sourceTree = "<group>"; };
+		AC48A8C422A1F94F000B3DD7 /* jewel27.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel27.jpg; sourceTree = "<group>"; };
+		AC48A8C522A1F94F000B3DD7 /* jewel2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel2.jpg; sourceTree = "<group>"; };
+		AC48A8C622A1F94F000B3DD7 /* jewel15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel15.jpg; sourceTree = "<group>"; };
+		AC48A8C722A1F94F000B3DD7 /* jewel58.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel58.jpg; sourceTree = "<group>"; };
+		AC48A8C822A1F950000B3DD7 /* jewel32.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel32.jpg; sourceTree = "<group>"; };
+		AC48A8C922A1F950000B3DD7 /* jewel5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel5.jpg; sourceTree = "<group>"; };
+		AC48A8CA22A1F950000B3DD7 /* jewel3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel3.jpg; sourceTree = "<group>"; };
+		AC48A8CB22A1F950000B3DD7 /* jewel16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel16.jpg; sourceTree = "<group>"; };
+		AC48A8CC22A1F950000B3DD7 /* jewel28.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel28.jpg; sourceTree = "<group>"; };
+		AC48A8CD22A1F950000B3DD7 /* jewel42.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel42.jpg; sourceTree = "<group>"; };
+		AC48A8CE22A1F950000B3DD7 /* jewel25.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel25.jpg; sourceTree = "<group>"; };
+		AC48A8CF22A1F951000B3DD7 /* jewel52.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel52.jpg; sourceTree = "<group>"; };
+		AC48A8D022A1F951000B3DD7 /* jewel30.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel30.jpg; sourceTree = "<group>"; };
+		AC48A8D122A1F951000B3DD7 /* jewel23.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel23.jpg; sourceTree = "<group>"; };
+		AC48A8D222A1F951000B3DD7 /* jewel36.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel36.jpg; sourceTree = "<group>"; };
+		AC48A8D322A1F951000B3DD7 /* jewel4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel4.jpg; sourceTree = "<group>"; };
+		AC48A8D422A1F951000B3DD7 /* jewel60.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel60.jpg; sourceTree = "<group>"; };
+		AC48A8D522A1F951000B3DD7 /* jewel8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel8.jpg; sourceTree = "<group>"; };
+		AC48A8D622A1F952000B3DD7 /* jewel50.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel50.jpg; sourceTree = "<group>"; };
+		AC48A8D722A1F952000B3DD7 /* jewel51.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel51.jpg; sourceTree = "<group>"; };
+		AC48A8D822A1F952000B3DD7 /* jewel24.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel24.jpg; sourceTree = "<group>"; };
+		AC48A8D922A1F952000B3DD7 /* jewel67.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel67.jpg; sourceTree = "<group>"; };
+		AC48A8DA22A1F952000B3DD7 /* jewel38.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel38.jpg; sourceTree = "<group>"; };
+		AC48A8DB22A1F952000B3DD7 /* jewel37.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel37.jpg; sourceTree = "<group>"; };
+		AC48A8DC22A1F953000B3DD7 /* jewel6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel6.jpg; sourceTree = "<group>"; };
+		AC48A8DD22A1F953000B3DD7 /* jewel40.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel40.jpg; sourceTree = "<group>"; };
+		AC48A8DE22A1F953000B3DD7 /* jewel10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel10.jpg; sourceTree = "<group>"; };
+		AC48A8DF22A1F953000B3DD7 /* jewel13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel13.jpg; sourceTree = "<group>"; };
+		AC48A8E022A1F953000B3DD7 /* jewel26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel26.jpg; sourceTree = "<group>"; };
+		AC48A8E122A1F953000B3DD7 /* jewel39.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel39.jpg; sourceTree = "<group>"; };
+		AC48A8E222A1F954000B3DD7 /* jewel48.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel48.jpg; sourceTree = "<group>"; };
+		AC48A8E322A1F954000B3DD7 /* jewel49.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel49.jpg; sourceTree = "<group>"; };
+		AC48A8E422A1F954000B3DD7 /* jewel62.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel62.jpg; sourceTree = "<group>"; };
+		AC48A8E522A1F954000B3DD7 /* jewel21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel21.jpg; sourceTree = "<group>"; };
+		AC48A8E622A1F954000B3DD7 /* jewel74.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel74.jpg; sourceTree = "<group>"; };
+		AC48A8E722A1F954000B3DD7 /* jewel69.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel69.jpg; sourceTree = "<group>"; };
+		AC48A8E822A1F954000B3DD7 /* jewel29.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel29.jpg; sourceTree = "<group>"; };
+		AC48A8E922A1F955000B3DD7 /* jewel19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel19.jpg; sourceTree = "<group>"; };
+		AC48A8EA22A1F955000B3DD7 /* jewel9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel9.jpg; sourceTree = "<group>"; };
+		AC48A8EB22A1F955000B3DD7 /* jewel11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel11.jpg; sourceTree = "<group>"; };
+		AC48A8EC22A1F955000B3DD7 /* jewel53.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel53.jpg; sourceTree = "<group>"; };
+		AC48A8ED22A1F955000B3DD7 /* jewel14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jewel14.jpg; sourceTree = "<group>"; };
+		AC48A93A22A1F9C8000B3DD7 /* ImportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportViewController.swift; sourceTree = "<group>"; };
+		AC48A94022A1FC5E000B3DD7 /* MultipleThumbnailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleThumbnailItem.swift; sourceTree = "<group>"; };
+		AC48A94122A1FC5E000B3DD7 /* MultipleThumbnailItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipleThumbnailItem.xib; sourceTree = "<group>"; };
 		AC48E0222292DC4D0097D429 /* Priceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priceable.swift; sourceTree = "<group>"; };
 		AC48E0262292DC9B0097D429 /* PriceableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceableTests.swift; sourceTree = "<group>"; };
 		AC48E028229627370097D429 /* Ideas.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ideas.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		AC4C9859229B74D80081631C /* FilterableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterableTableViewController.swift; sourceTree = "<group>"; };
+		AC6779D722B1CF2C00C902D9 /* ImageDownSampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownSampler.swift; sourceTree = "<group>"; };
+		AC6779D922B1D03300C902D9 /* FileManager+contentsOfFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+contentsOfFolder.swift"; sourceTree = "<group>"; };
+		AC6779DB22B1D0F500C902D9 /* ImportItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportItemProtocol.swift; sourceTree = "<group>"; };
+		AC78B28E22AFE27300454396 /* TODO_Next.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO_Next.md; sourceTree = "<group>"; };
 		ACC7129322799391002C1471 /* YCC Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YCC Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC7129622799391002C1471 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACC7129822799391002C1471 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +230,6 @@
 		ACC712B022799393002C1471 /* YCC ManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YCC ManagerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC712B422799393002C1471 /* YCC_ManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCC_ManagerUITests.swift; sourceTree = "<group>"; };
 		ACC712B622799393002C1471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ACC712C2227993BC002C1471 /* ItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemProtocol.swift; sourceTree = "<group>"; };
 		ACF991BF229A4DCC00C40A04 /* ImagesStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,10 +258,137 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC2BCF55229AE9F70099E48F /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				AC48E028229627370097D429 /* Ideas.playground */,
+				AC2BCF58229AEA9B0099E48F /* Filterable.playground */,
+			);
+			path = Playgrounds;
+			sourceTree = "<group>";
+		};
+		AC2F4ED3229CB7E000531EE4 /* Fake Data */ = {
+			isa = PBXGroup;
+			children = (
+				AC2F4ED4229CB7F800531EE4 /* dealers.plist */,
+			);
+			path = "Fake Data";
+			sourceTree = "<group>";
+		};
+		AC48A8A122A1F8A5000B3DD7 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				AC48A8BB22A1F94E000B3DD7 /* jewel1.jpg */,
+				AC48A8C522A1F94F000B3DD7 /* jewel2.jpg */,
+				AC48A8CA22A1F950000B3DD7 /* jewel3.jpg */,
+				AC48A8D322A1F951000B3DD7 /* jewel4.jpg */,
+				AC48A8C922A1F950000B3DD7 /* jewel5.jpg */,
+				AC48A8DC22A1F953000B3DD7 /* jewel6.jpg */,
+				AC48A8B522A1F94D000B3DD7 /* jewel7.jpg */,
+				AC48A8D522A1F951000B3DD7 /* jewel8.jpg */,
+				AC48A8EA22A1F955000B3DD7 /* jewel9.jpg */,
+				AC48A8DE22A1F953000B3DD7 /* jewel10.jpg */,
+				AC48A8EB22A1F955000B3DD7 /* jewel11.jpg */,
+				AC48A8BD22A1F94E000B3DD7 /* jewel12.jpg */,
+				AC48A8DF22A1F953000B3DD7 /* jewel13.jpg */,
+				AC48A8ED22A1F955000B3DD7 /* jewel14.jpg */,
+				AC48A8C622A1F94F000B3DD7 /* jewel15.jpg */,
+				AC48A8CB22A1F950000B3DD7 /* jewel16.jpg */,
+				AC48A8BF22A1F94F000B3DD7 /* jewel17.jpg */,
+				AC48A8AC22A1F94C000B3DD7 /* jewel18.jpg */,
+				AC48A8E922A1F955000B3DD7 /* jewel19.jpg */,
+				AC48A8B722A1F94E000B3DD7 /* jewel20.jpg */,
+				AC48A8E522A1F954000B3DD7 /* jewel21.jpg */,
+				AC48A8A822A1F94C000B3DD7 /* jewel22.jpg */,
+				AC48A8D122A1F951000B3DD7 /* jewel23.jpg */,
+				AC48A8D822A1F952000B3DD7 /* jewel24.jpg */,
+				AC48A8CE22A1F950000B3DD7 /* jewel25.jpg */,
+				AC48A8E022A1F953000B3DD7 /* jewel26.jpg */,
+				AC48A8C422A1F94F000B3DD7 /* jewel27.jpg */,
+				AC48A8CC22A1F950000B3DD7 /* jewel28.jpg */,
+				AC48A8E822A1F954000B3DD7 /* jewel29.jpg */,
+				AC48A8D022A1F951000B3DD7 /* jewel30.jpg */,
+				AC48A8AF22A1F94D000B3DD7 /* jewel31.jpg */,
+				AC48A8C822A1F950000B3DD7 /* jewel32.jpg */,
+				AC48A8BE22A1F94E000B3DD7 /* jewel33.jpg */,
+				AC48A8B922A1F94E000B3DD7 /* jewel34.jpg */,
+				AC48A8AE22A1F94D000B3DD7 /* jewel35.jpg */,
+				AC48A8D222A1F951000B3DD7 /* jewel36.jpg */,
+				AC48A8DB22A1F952000B3DD7 /* jewel37.jpg */,
+				AC48A8DA22A1F952000B3DD7 /* jewel38.jpg */,
+				AC48A8E122A1F953000B3DD7 /* jewel39.jpg */,
+				AC48A8DD22A1F953000B3DD7 /* jewel40.jpg */,
+				AC48A8C022A1F94F000B3DD7 /* jewel41.jpg */,
+				AC48A8CD22A1F950000B3DD7 /* jewel42.jpg */,
+				AC48A8B622A1F94D000B3DD7 /* jewel43.jpg */,
+				AC48A8A722A1F94C000B3DD7 /* jewel44.jpg */,
+				AC48A8B022A1F94D000B3DD7 /* jewel45.jpg */,
+				AC48A8B322A1F94D000B3DD7 /* jewel46.jpg */,
+				AC48A8B822A1F94E000B3DD7 /* jewel47.jpg */,
+				AC48A8E222A1F954000B3DD7 /* jewel48.jpg */,
+				AC48A8E322A1F954000B3DD7 /* jewel49.jpg */,
+				AC48A8D622A1F952000B3DD7 /* jewel50.jpg */,
+				AC48A8D722A1F952000B3DD7 /* jewel51.jpg */,
+				AC48A8CF22A1F951000B3DD7 /* jewel52.jpg */,
+				AC48A8EC22A1F955000B3DD7 /* jewel53.jpg */,
+				AC48A8B222A1F94D000B3DD7 /* jewel54.jpg */,
+				AC48A8B122A1F94D000B3DD7 /* jewel55.jpg */,
+				AC48A8A622A1F94C000B3DD7 /* jewel56.jpg */,
+				AC48A8BC22A1F94E000B3DD7 /* jewel57.jpg */,
+				AC48A8C722A1F94F000B3DD7 /* jewel58.jpg */,
+				AC48A8A922A1F94C000B3DD7 /* jewel59.jpg */,
+				AC48A8D422A1F951000B3DD7 /* jewel60.jpg */,
+				AC48A8B422A1F94D000B3DD7 /* jewel61.jpg */,
+				AC48A8E422A1F954000B3DD7 /* jewel62.jpg */,
+				AC48A8A222A1F94B000B3DD7 /* jewel63.jpg */,
+				AC48A8AB22A1F94C000B3DD7 /* jewel64.jpg */,
+				AC48A8A522A1F94B000B3DD7 /* jewel65.jpg */,
+				AC48A8A322A1F94B000B3DD7 /* jewel66.jpg */,
+				AC48A8D922A1F952000B3DD7 /* jewel67.jpg */,
+				AC48A8BA22A1F94E000B3DD7 /* jewel68.jpg */,
+				AC48A8E722A1F954000B3DD7 /* jewel69.jpg */,
+				AC48A8C122A1F94F000B3DD7 /* jewel70.jpg */,
+				AC48A8C222A1F94F000B3DD7 /* jewel71.jpg */,
+				AC48A8AD22A1F94C000B3DD7 /* jewel72.jpg */,
+				AC48A8C322A1F94F000B3DD7 /* jewel73.jpg */,
+				AC48A8E622A1F954000B3DD7 /* jewel74.jpg */,
+				AC48A8A422A1F94B000B3DD7 /* jewel75.jpg */,
+				AC48A8AA22A1F94C000B3DD7 /* jewel76.jpg */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		AC4C9858229B74BB0081631C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC4C9859229B74D80081631C /* FilterableTableViewController.swift */,
+				AC48A93A22A1F9C8000B3DD7 /* ImportViewController.swift */,
+				AC3C8F8122A5F28E00F95EDA /* MultipleThumbnailPreviewViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AC6779D622B1CF0000C902D9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AC6779D722B1CF2C00C902D9 /* ImageDownSampler.swift */,
+				AC6779D922B1D03300C902D9 /* FileManager+contentsOfFolder.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		AC78B28F22AFE4C000454396 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
 		AC9E84122291BFA100D1F076 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				AC48E0222292DC4D0097D429 /* Priceable.swift */,
+				AC6779DB22B1D0F500C902D9 /* ImportItemProtocol.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -121,6 +424,12 @@
 		ACC7129522799391002C1471 /* YCC Manager */ = {
 			isa = PBXGroup;
 			children = (
+				AC6779D622B1CF0000C902D9 /* Utilities */,
+				AC78B28F22AFE4C000454396 /* Operations */,
+				AC48A8A122A1F8A5000B3DD7 /* Photos */,
+				AC2F4ED3229CB7E000531EE4 /* Fake Data */,
+				AC4C9858229B74BB0081631C /* ViewControllers */,
+				AC2BCF55229AE9F70099E48F /* Playgrounds */,
 				ACF991BE229A4B2C00C40A04 /* Views */,
 				AC9E84122291BFA100D1F076 /* Models */,
 				ACC7129622799391002C1471 /* AppDelegate.swift */,
@@ -129,8 +438,7 @@
 				ACC7129C22799393002C1471 /* Main.storyboard */,
 				ACC7129F22799393002C1471 /* Info.plist */,
 				ACC712A022799393002C1471 /* YCC_Manager.entitlements */,
-				ACC712C2227993BC002C1471 /* ItemProtocol.swift */,
-				AC48E028229627370097D429 /* Ideas.playground */,
+				AC78B28E22AFE27300454396 /* TODO_Next.md */,
 			);
 			path = "YCC Manager";
 			sourceTree = "<group>";
@@ -158,6 +466,11 @@
 			isa = PBXGroup;
 			children = (
 				ACF991BF229A4DCC00C40A04 /* ImagesStack.swift */,
+				AC48A89F229D67C5000B3DD7 /* FilterableContentCellView.swift */,
+				AC48A94022A1FC5E000B3DD7 /* MultipleThumbnailItem.swift */,
+				AC48A94122A1FC5E000B3DD7 /* MultipleThumbnailItem.xib */,
+				AC3C8F7D22A5F1C600F95EDA /* SingleThumbnailItem.swift */,
+				AC3C8F7E22A5F1C600F95EDA /* SingleThumbnailItem.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -225,18 +538,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Vikram Raj Gopinathan";
 				TargetAttributes = {
 					ACC7129222799391002C1471 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 					};
 					ACC712A422799393002C1471 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 						TestTargetID = ACC7129222799391002C1471;
 					};
 					ACC712AF22799393002C1471 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 						TestTargetID = ACC7129222799391002C1471;
 					};
 				};
@@ -266,8 +582,87 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC48A93522A1F956000B3DD7 /* jewel19.jpg in Resources */,
+				AC48A91422A1F956000B3DD7 /* jewel32.jpg in Resources */,
+				AC48A92422A1F956000B3DD7 /* jewel24.jpg in Resources */,
+				AC48A92522A1F956000B3DD7 /* jewel67.jpg in Resources */,
+				AC48A90522A1F956000B3DD7 /* jewel34.jpg in Resources */,
+				AC48A90222A1F956000B3DD7 /* jewel43.jpg in Resources */,
+				AC48A92022A1F956000B3DD7 /* jewel60.jpg in Resources */,
+				AC48A8FC22A1F956000B3DD7 /* jewel45.jpg in Resources */,
+				AC48A90F22A1F956000B3DD7 /* jewel73.jpg in Resources */,
+				AC48A90322A1F956000B3DD7 /* jewel20.jpg in Resources */,
+				AC48A8F922A1F956000B3DD7 /* jewel72.jpg in Resources */,
+				AC48A90122A1F956000B3DD7 /* jewel7.jpg in Resources */,
+				AC48A8FE22A1F956000B3DD7 /* jewel54.jpg in Resources */,
+				AC48A93222A1F956000B3DD7 /* jewel74.jpg in Resources */,
+				AC48A92622A1F956000B3DD7 /* jewel38.jpg in Resources */,
+				AC48A90622A1F956000B3DD7 /* jewel68.jpg in Resources */,
+				AC2F4ED5229CB7F800531EE4 /* dealers.plist in Resources */,
+				AC48A92C22A1F956000B3DD7 /* jewel26.jpg in Resources */,
+				AC48A90822A1F956000B3DD7 /* jewel57.jpg in Resources */,
+				AC48A93022A1F956000B3DD7 /* jewel62.jpg in Resources */,
+				AC48A90022A1F956000B3DD7 /* jewel61.jpg in Resources */,
+				AC48A91822A1F956000B3DD7 /* jewel28.jpg in Resources */,
+				AC48A92D22A1F956000B3DD7 /* jewel39.jpg in Resources */,
+				AC48A90922A1F956000B3DD7 /* jewel12.jpg in Resources */,
+				AC48A92F22A1F956000B3DD7 /* jewel49.jpg in Resources */,
+				AC48A90D22A1F956000B3DD7 /* jewel70.jpg in Resources */,
+				AC48A91B22A1F956000B3DD7 /* jewel52.jpg in Resources */,
+				AC48A92322A1F956000B3DD7 /* jewel51.jpg in Resources */,
+				AC48A93322A1F956000B3DD7 /* jewel69.jpg in Resources */,
+				AC48A93622A1F956000B3DD7 /* jewel9.jpg in Resources */,
+				AC48A8FD22A1F956000B3DD7 /* jewel55.jpg in Resources */,
+				AC48A92E22A1F956000B3DD7 /* jewel48.jpg in Resources */,
+				AC48A91E22A1F956000B3DD7 /* jewel36.jpg in Resources */,
+				AC48A92722A1F956000B3DD7 /* jewel37.jpg in Resources */,
+				AC48A8F722A1F956000B3DD7 /* jewel64.jpg in Resources */,
+				AC48A8FF22A1F956000B3DD7 /* jewel46.jpg in Resources */,
+				AC48A91C22A1F956000B3DD7 /* jewel30.jpg in Resources */,
+				AC48A91D22A1F956000B3DD7 /* jewel23.jpg in Resources */,
+				AC48A8F822A1F956000B3DD7 /* jewel18.jpg in Resources */,
+				AC48A90722A1F956000B3DD7 /* jewel1.jpg in Resources */,
+				AC48A8FB22A1F956000B3DD7 /* jewel31.jpg in Resources */,
 				ACC7129B22799393002C1471 /* Assets.xcassets in Resources */,
+				AC48A8EE22A1F956000B3DD7 /* jewel63.jpg in Resources */,
+				AC48A91A22A1F956000B3DD7 /* jewel25.jpg in Resources */,
+				AC48A93722A1F956000B3DD7 /* jewel11.jpg in Resources */,
+				AC48A91522A1F956000B3DD7 /* jewel5.jpg in Resources */,
+				AC48A90E22A1F956000B3DD7 /* jewel71.jpg in Resources */,
+				AC48A90C22A1F956000B3DD7 /* jewel41.jpg in Resources */,
+				AC48A8F322A1F956000B3DD7 /* jewel44.jpg in Resources */,
+				AC48A90B22A1F956000B3DD7 /* jewel17.jpg in Resources */,
+				AC48A8F022A1F956000B3DD7 /* jewel75.jpg in Resources */,
+				AC48A92122A1F956000B3DD7 /* jewel8.jpg in Resources */,
+				AC48A8F422A1F956000B3DD7 /* jewel22.jpg in Resources */,
+				AC48A92222A1F956000B3DD7 /* jewel50.jpg in Resources */,
+				AC48A91322A1F956000B3DD7 /* jewel58.jpg in Resources */,
+				AC48A93922A1F956000B3DD7 /* jewel14.jpg in Resources */,
+				AC3C8F8022A5F1C600F95EDA /* SingleThumbnailItem.xib in Resources */,
+				AC48A91F22A1F956000B3DD7 /* jewel4.jpg in Resources */,
+				AC48A90A22A1F956000B3DD7 /* jewel33.jpg in Resources */,
+				AC48A8FA22A1F956000B3DD7 /* jewel35.jpg in Resources */,
+				AC48A91722A1F956000B3DD7 /* jewel16.jpg in Resources */,
+				AC48A8F622A1F956000B3DD7 /* jewel76.jpg in Resources */,
+				AC48A92A22A1F956000B3DD7 /* jewel10.jpg in Resources */,
+				AC48A92B22A1F956000B3DD7 /* jewel13.jpg in Resources */,
+				AC48A91122A1F956000B3DD7 /* jewel2.jpg in Resources */,
+				AC48A92922A1F956000B3DD7 /* jewel40.jpg in Resources */,
+				AC48A8F222A1F956000B3DD7 /* jewel56.jpg in Resources */,
+				AC48A91022A1F956000B3DD7 /* jewel27.jpg in Resources */,
+				AC48A8F522A1F956000B3DD7 /* jewel59.jpg in Resources */,
+				AC48A90422A1F956000B3DD7 /* jewel47.jpg in Resources */,
+				AC48A91622A1F956000B3DD7 /* jewel3.jpg in Resources */,
+				AC48A92822A1F956000B3DD7 /* jewel6.jpg in Resources */,
+				AC48A8EF22A1F956000B3DD7 /* jewel66.jpg in Resources */,
+				AC48A93122A1F956000B3DD7 /* jewel21.jpg in Resources */,
+				AC48A91922A1F956000B3DD7 /* jewel42.jpg in Resources */,
+				AC48A8F122A1F956000B3DD7 /* jewel65.jpg in Resources */,
 				ACC7129E22799393002C1471 /* Main.storyboard in Resources */,
+				AC48A93822A1F956000B3DD7 /* jewel53.jpg in Resources */,
+				AC48A94322A1FC5E000B3DD7 /* MultipleThumbnailItem.xib in Resources */,
+				AC48A93422A1F956000B3DD7 /* jewel29.jpg in Resources */,
+				AC48A91222A1F956000B3DD7 /* jewel15.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,11 +687,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC6779D822B1CF2C00C902D9 /* ImageDownSampler.swift in Sources */,
+				AC4C985A229B74D80081631C /* FilterableTableViewController.swift in Sources */,
 				ACC7129922799391002C1471 /* ViewController.swift in Sources */,
+				AC3C8F8222A5F28E00F95EDA /* MultipleThumbnailPreviewViewController.swift in Sources */,
+				AC48A94222A1FC5E000B3DD7 /* MultipleThumbnailItem.swift in Sources */,
+				AC48A8A0229D67C5000B3DD7 /* FilterableContentCellView.swift in Sources */,
 				AC48E0232292DC4D0097D429 /* Priceable.swift in Sources */,
 				ACF991C0229A4DCC00C40A04 /* ImagesStack.swift in Sources */,
+				AC3C8F7F22A5F1C600F95EDA /* SingleThumbnailItem.swift in Sources */,
 				ACC7129722799391002C1471 /* AppDelegate.swift in Sources */,
-				ACC712C3227993BC002C1471 /* ItemProtocol.swift in Sources */,
+				AC6779DA22B1D03300C902D9 /* FileManager+contentsOfFolder.swift in Sources */,
+				AC48A93B22A1F9C8000B3DD7 /* ImportViewController.swift in Sources */,
+				AC6779DC22B1D0F500C902D9 /* ImportItemProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +867,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "YCC Manager/YCC_Manager.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "YCC Manager/Info.plist";
@@ -473,7 +877,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kivi.YCC-Manager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -482,6 +886,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "YCC Manager/YCC_Manager.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "YCC Manager/Info.plist";
@@ -491,7 +896,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kivi.YCC-Manager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -510,7 +915,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kivi.YCC-ManagerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YCC Manager.app/Contents/MacOS/YCC Manager";
 			};
 			name = Debug;
@@ -530,7 +935,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kivi.YCC-ManagerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YCC Manager.app/Contents/MacOS/YCC Manager";
 			};
 			name = Release;
@@ -549,7 +954,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kivi.YCC-ManagerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "YCC Manager";
 			};
 			name = Debug;
@@ -568,7 +973,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kivi.YCC-ManagerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "YCC Manager";
 			};
 			name = Release;
