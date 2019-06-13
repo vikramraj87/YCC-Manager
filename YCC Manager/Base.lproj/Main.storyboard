@@ -756,17 +756,17 @@
             <objects>
                 <viewController id="SqZ-eZ-6kc" customClass="ImportViewController" customModule="YCC_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="lYy-mc-gWT">
-                        <rect key="frame" x="0.0" y="0.0" width="1142" height="759"/>
+                        <rect key="frame" x="0.0" y="0.0" width="912" height="759"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnE-hu-971">
-                                <rect key="frame" x="0.0" y="48" width="1142" height="711"/>
+                                <rect key="frame" x="0.0" y="48" width="912" height="711"/>
                                 <clipView key="contentView" id="mXG-c4-yBF">
-                                    <rect key="frame" x="1" y="1" width="1140" height="709"/>
+                                    <rect key="frame" x="1" y="1" width="910" height="709"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <collectionView id="PzL-sR-tnr">
-                                            <rect key="frame" x="0.0" y="0.0" width="1140" height="709"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="910" height="709"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="0cv-CV-tZr">
                                                 <size key="itemSize" width="50" height="50"/>
@@ -785,9 +785,9 @@
                                 </scroller>
                             </scrollView>
                             <box boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="aeT-hS-D4f">
-                                <rect key="frame" x="0.0" y="0.0" width="1142" height="48"/>
+                                <rect key="frame" x="0.0" y="0.0" width="912" height="48"/>
                                 <view key="contentView" id="xsu-UH-YDT">
-                                    <rect key="frame" x="0.0" y="0.0" width="1142" height="48"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="912" height="48"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ktj-ux-WkE">
@@ -803,6 +803,9 @@
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="addImages:" target="SqZ-eZ-6kc" id="XgM-q5-MA3"/>
+                                                    </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xg3-se-7Uy">
                                                     <rect key="frame" x="40" y="-1" width="32" height="34"/>
@@ -865,7 +868,10 @@
                                             </customSpacing>
                                         </stackView>
                                         <tokenField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6A3-fp-kbx">
-                                            <rect key="frame" x="276" y="12" width="590" height="24"/>
+                                            <rect key="frame" x="276" y="12" width="360" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="360" id="ZC5-dK-tEc"/>
+                                            </constraints>
                                             <tokenFieldCell key="cell" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" placeholderString="Keywords" drawsBackground="YES" allowsEditingTextAttributes="YES" id="9Dg-kC-4YF">
                                                 <font key="font" metaFont="system" size="16"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -873,7 +879,7 @@
                                             </tokenFieldCell>
                                         </tokenField>
                                         <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="12" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="prD-3V-oJ4">
-                                            <rect key="frame" x="898" y="14" width="228" height="21"/>
+                                            <rect key="frame" x="668" y="14" width="228" height="21"/>
                                             <subviews>
                                                 <button horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pli-D5-Kic">
                                                     <rect key="frame" x="-6" y="-7" width="120" height="32"/>

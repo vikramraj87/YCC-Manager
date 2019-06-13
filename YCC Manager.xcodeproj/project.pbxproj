@@ -270,6 +270,7 @@
 		AC2F4ED3229CB7E000531EE4 /* Fake Data */ = {
 			isa = PBXGroup;
 			children = (
+				AC48A8A122A1F8A5000B3DD7 /* Photos */,
 				AC2F4ED4229CB7F800531EE4 /* dealers.plist */,
 			);
 			path = "Fake Data";
@@ -426,7 +427,6 @@
 			children = (
 				AC6779D622B1CF0000C902D9 /* Utilities */,
 				AC78B28F22AFE4C000454396 /* Operations */,
-				AC48A8A122A1F8A5000B3DD7 /* Photos */,
 				AC2F4ED3229CB7E000531EE4 /* Fake Data */,
 				AC4C9858229B74BB0081631C /* ViewControllers */,
 				AC2BCF55229AE9F70099E48F /* Playgrounds */,

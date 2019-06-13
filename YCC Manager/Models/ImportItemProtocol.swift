@@ -9,46 +9,52 @@
 import Cocoa
 
 protocol ImportItemProtocol {
-    var images: [NSImage] { get set }
+    var imageURLs: [URL] { get set }
     
-    mutating func merge(_ items: [ImportItemProtocol])
+    mutating func merge(with items: [ImportItemProtocol])
     mutating func unmerge() -> [ImportItemProtocol]
     
     var hasMultipleImages: Bool { get }
+    
+    func contains(_ url: URL) -> Bool
 }
 
 extension ImportItemProtocol {
     var hasMultipleImages: Bool {
-        return images.count > 1
+        return imageURLs.count > 1
     }
     
-    mutating func merge(_ items: [ImportItemProtocol]) {
+    mutating func merge(with items: [ImportItemProtocol]) {
         for item in items {
-            self.images.append(contentsOf: item.images)
+            self.imageURLs.append(contentsOf: item.imageURLs)
         }
     }
     
-    mutating func unmerge() -> [ImportItemProtocol] {
-        guard images.count > 1 else { return [] }
-        
-        let firstImage = images.first!
-        
-        let newItems = images.dropFirst().map { return ImportItem(image: $0) }
-        images = [firstImage]
-        return newItems
+    func contains(_ url: URL) -> Bool {
+        return imageURLs.contains(url)
     }
 }
 
 struct ImportItem {
-    var images: [NSImage] = []
+    var imageURLs: [URL]
     
-    init(images: [NSImage]) {
-        self.images = images
+    init(imageURLs: [URL]) {
+        self.imageURLs = imageURLs
     }
     
-    init(image: NSImage) {
-        self.images = [image]
+    init(imageURL: URL) {
+        self.init(imageURLs: [imageURL])
     }
 }
 
-extension ImportItem: ImportItemProtocol {}
+extension ImportItem: ImportItemProtocol {
+    mutating func unmerge() -> [ImportItemProtocol] {
+        guard imageURLs.count > 1 else { return [] }
+
+        let firstImageURL = imageURLs.first!
+
+        let newItems = imageURLs.dropFirst().map { ImportItem(imageURL: $0) }
+        imageURLs = [firstImageURL]
+        return newItems
+    }
+}

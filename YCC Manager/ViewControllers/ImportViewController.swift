@@ -28,26 +28,12 @@ class ImportViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Load dummy data
-        let sampleImages = loadImages()
-        items.reserveCapacity(sampleImages.capacity)
-        items = sampleImages.map { return ImportItem(image: $0) }
-        
         view.wantsLayer = true
         
         mergeButton.isEnabled = false
         unmergeButton.isEnabled = false
         
         configure(thumbnailView)
-    }
-    
-    @objc func collectionViewDidScroll(_ notification: Notification) {
-        let selectionIndexPaths = thumbnailView.selectionIndexPaths
-        
-        guard selectionIndexPaths.count == 1 else { return }
-        
-        
-        
     }
     
     private func configure(_ collectionView: NSCollectionView) {
@@ -70,30 +56,6 @@ class ImportViewController: NSViewController {
         layout.minimumLineSpacing = 10.0
         
         collectionView.collectionViewLayout = layout
-        
-        if let clipView = thumbnailView.superview {
-            clipView.postsBoundsChangedNotifications = true
-            NotificationCenter.default.addObserver(self,
-                                                   selector: #selector(collectionViewDidScroll(_:)),
-                                                   name: NSView.boundsDidChangeNotification,
-                                                   object: clipView)
-        }
-    }
-    
-    private func loadImages() -> [NSImage] {
-        var images: [NSImage] = []
-        let maxIndex = 76
-        
-        images.reserveCapacity(maxIndex)
-        
-        for i in 1...maxIndex {
-            guard let imagePath = Bundle.main.path(forResource: "jewel\(i)", ofType: "jpg") else { continue }
-            guard let image = NSImage(contentsOfFile: imagePath) else { continue }
-            images.append(image)
-        }
-        
-        
-        return images
     }
     
     private func mergeItems(at indexes: Set<IndexPath>) {
@@ -108,7 +70,7 @@ class ImportViewController: NSViewController {
         let arrayIndexesToMerge = indexesToMerge.map { return $0.item }
         let itemsToMerge = arrayIndexesToMerge.map { return items[$0] }
         
-        items[firstIndex.item].merge(itemsToMerge)
+        items[firstIndex.item].merge(with: itemsToMerge)
         
         var newItems: [ImportItemProtocol] = []
         for (index, item) in items.enumerated() {
@@ -155,6 +117,45 @@ class ImportViewController: NSViewController {
         unmergeItem(at: thumbnailView.selectionIndexPaths.first!)
         validateMergeUnmerge()
     }
+    
+    @IBAction func addImages(_ sender: Any) {
+        importImages()
+    }
+    
+    private func importImages() {
+        // Show NSOpenPanel
+        guard let window = view.window else {
+            print("No window to present open panel")
+            return
+        }
+        
+        let openPanel = NSOpenPanel()
+        openPanel.canChooseFiles = true
+        openPanel.canChooseDirectories = false
+        openPanel.allowsMultipleSelection = true
+        
+        openPanel.beginSheetModal(for: window) { [weak self] response in
+            guard response == .OK else { return }
+            
+            self?.processSelectedURLs(openPanel.urls)
+        }
+    }
+    
+    private func processSelectedURLs(_ urls: [URL]) {
+        // TODO: Add extensions to UserDefaults
+        let allowedExtensions = ["jpg", "jpeg"]
+        let filteredURLs =  urls.filter { url in
+            let fileExtension = url.pathExtension.lowercased()
+            return allowedExtensions.contains(fileExtension)
+        }
+        let newItems = filteredURLs.map { ImportItem(imageURL: $0) }
+        items.append(contentsOf: newItems)
+        thumbnailView.reloadData()
+    }
+    
+    private func filterDuplicates(_ urls: [URL]) {
+        
+    }
 }
 
 extension ImportViewController: NSCollectionViewDataSource {
@@ -171,7 +172,16 @@ extension ImportViewController: NSCollectionViewDataSource {
             print("Cannot get multiple thumbnail item")
             return viewItem
         }
-        thumbnailItem.thumbnails = item.images
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            let downsizedImages = item.imageURLs.compactMap {
+                ImageDownSampler.downsample(imageAt: $0, to: 500)
+            }
+            DispatchQueue.main.async {
+                thumbnailItem.thumbnails = downsizedImages
+            }
+        }
+        
         return thumbnailItem
     }
 }
