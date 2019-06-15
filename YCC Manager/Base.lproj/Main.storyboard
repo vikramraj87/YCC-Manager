@@ -945,6 +945,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="keywordsTokenField" destination="6A3-fp-kbx" id="d2f-z8-9Zs"/>
                         <outlet property="mergeButton" destination="CQ5-ef-nfI" id="uw0-wL-yKk"/>
                         <outlet property="removeItemsButton" destination="xg3-se-7Uy" id="agk-7L-FKR"/>
                         <outlet property="thumbnailView" destination="PzL-sR-tnr" id="3JE-iT-I9m"/>

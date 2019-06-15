@@ -8,8 +8,6 @@
 
 import Cocoa
 
-
-
 extension NSNib.Name {
     static let multipleThumbnailItem = NSNib.Name("MultipleThumbnailItem")
 }
@@ -19,12 +17,16 @@ extension NSUserInterfaceItemIdentifier {
 }
 
 class ImportViewController: NSViewController {
-    var items: [ImportItemProtocol] = []
+    var items: [ImportItem] = []
     
     @IBOutlet weak var thumbnailView: NSCollectionView!
     @IBOutlet weak var mergeButton: NSButton!
     @IBOutlet weak var unmergeButton: NSButton!
     @IBOutlet weak var removeItemsButton: NSButton!
+    
+    @IBOutlet weak var keywordsTokenField: NSTokenField!
+    
+    private var validKeywords: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +35,28 @@ class ImportViewController: NSViewController {
         
         validateMergeUnmerge()
         validateRemoveItems()
+        validateTagging()
         
-        configure(thumbnailView)
+        configureCollectionView(thumbnailView)
+        configureTokenField(keywordsTokenField)
     }
     
-    private func configure(_ collectionView: NSCollectionView) {
+    private func configureTokenField(_ tokenField: NSTokenField) {
+        tokenField.delegate = self
+        
+        // Load valid keywords from database
+        validKeywords = [
+            "Ring", "AD Stone", "Matt finish",
+            "Haaram", "Necklace", "Antique finish",
+            "Hip belt", "Hip chain", "Bridal set",
+            "Dual set", "Bracelet", "Toe ring",
+            "Oxidised jewellery"
+        ]
+
+        // TODO: Observe changes in keywords to update the list
+    }
+    
+    private func configureCollectionView(_ collectionView: NSCollectionView) {
         let multipleThumbnailItem = NSNib(nibNamed: .multipleThumbnailItem, bundle: nil)
         
         collectionView.register(multipleThumbnailItem, forItemWithIdentifier: .multipleThumbnailItem)
@@ -95,11 +114,11 @@ class ImportViewController: NSViewController {
         thumbnailView.selectItems(at: Set([index]).union(insertedIndexPaths), scrollPosition: .centeredVertically)
     }
     
-    private func item(at indexPath: IndexPath) -> ImportItemProtocol {
+    private func item(at indexPath: IndexPath) -> ImportItem {
         return items[indexPath.item]
     }
     
-    private func items(at indexPaths: Set<IndexPath>) -> [ImportItemProtocol] {
+    private func items(at indexPaths: Set<IndexPath>) -> [ImportItem] {
         return indexPaths.map { return items[$0.item] }
     }
     
@@ -195,16 +214,26 @@ extension ImportViewController: NSCollectionViewDelegate {
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
         validateMergeUnmerge()
         validateRemoveItems()
+        validateTagging()
     }
     
     func collectionView(_ collectionView: NSCollectionView, didDeselectItemsAt indexPaths: Set<IndexPath>) {
         validateMergeUnmerge()
         validateRemoveItems()
+        validateTagging()
+    }
+    
+    private func validateTagging() {
+        keywordsTokenField.isEnabled = canTag()
+        let selectedItems = items(at: thumbnailView.selectionIndexPaths)
+        keywordsTokenField.objectValue = selectedItems.tags
     }
     
     private func validateMergeUnmerge() {
+        let selectedItems = items(at: thumbnailView.selectionIndexPaths)
+        
         unmergeButton.isEnabled = canUnmerge()
-        mergeButton.isEnabled = canMerge()
+        mergeButton.isEnabled = selectedItems.canMerge
     }
     
     private func validateRemoveItems() {
@@ -221,18 +250,53 @@ extension ImportViewController: NSCollectionViewDelegate {
         return selectedItem.hasMultipleImages
     }
     
-    private func canMerge() -> Bool {
-        if thumbnailView.selectionIndexPaths.count < 2 {
-            return false
-        }
+    private func canTag() -> Bool {
+        let selectedIndexPaths = thumbnailView.selectionIndexPaths
         
-        for item in items(at: thumbnailView.selectionIndexPaths) {
-            if item.hasMultipleImages {
-                return false
-            }
-        }
+        guard !selectedIndexPaths.isEmpty else { return false }
         
-        return true
+        if selectedIndexPaths.count == 1 { return true }
+        
+        return items(at: selectedIndexPaths).hasSameTags
+    }
+    
+    private func tagSelectedItems(with tags: [String]) {
+        let selectedIndexPaths = thumbnailView.selectionIndexPaths
+        
+        guard !selectedIndexPaths.isEmpty else { return }
+        
+        for indexPath in selectedIndexPaths {
+            items[indexPath.item].tags = tags
+        }
     }
 }
 
+extension ImportViewController: NSTokenFieldDelegate {
+    func tokenField(_ tokenField: NSTokenField, completionsForSubstring substring: String, indexOfToken tokenIndex: Int, indexOfSelectedItem selectedIndex: UnsafeMutablePointer<Int>?) -> [Any]? {
+        return validKeywords.filter {
+            $0.lowercased().hasPrefix(substring.lowercased())
+        }
+    }
+    
+    func tokenField(_ tokenField: NSTokenField, shouldAdd tokens: [Any], at index: Int) -> [Any] {
+        let keywordsToAdd = tokens.compactMap { $0 as? String }
+        return keywordsToAdd.filter { validKeywords.contains($0) }
+    }
+    
+    func controlTextDidEndEditing(_ obj: Notification) {
+        guard let tokenField = obj.object as? NSTokenField else { return }
+        let filtered = filteredKeywords(from: tokenField)
+        tokenField.objectValue = filtered
+    }
+    
+    func controlTextDidChange(_ obj: Notification) {
+        guard let tokenField = obj.object as? NSTokenField else { return }
+        let filtered = filteredKeywords(from: tokenField)
+        tagSelectedItems(with: filtered)
+    }
+    
+    func filteredKeywords(from tokenField: NSTokenField) -> [String] {
+        guard let words = tokenField.objectValue as? [String] else { return [] }
+        return words.filter { validKeywords.contains($0) }
+    }
+}
