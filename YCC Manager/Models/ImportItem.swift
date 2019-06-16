@@ -67,6 +67,12 @@ extension Collection where Element == ImportItem {
         return true
     }
     
+    var canTag: Bool {
+        if isEmpty { return false }
+        
+        return hasSameTags
+    }
+    
     var hasSameTags: Bool {
         guard count > 1 else { return true }
         

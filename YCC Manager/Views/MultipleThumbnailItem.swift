@@ -11,10 +11,17 @@ import Combine
 
 class MultipleThumbnailItem: NSCollectionViewItem {
     @IBOutlet private weak var thumbnailView: ImagesStackView!
+    @IBOutlet private weak var tagImageView: NSImageView!
     
     var thumbnails: [NSImage] = [] {
         didSet {
             thumbnailView.images = thumbnails
+        }
+    }
+    
+    var hasTags: Bool = false {
+        didSet {
+            tagImageView.isHidden = !hasTags
         }
     }
     
@@ -38,12 +45,16 @@ class MultipleThumbnailItem: NSCollectionViewItem {
         super.prepareForReuse()
         thumbnails = []
         hideHighlight()
+        tagImageView.isHidden = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.wantsLayer = true
         view.layer?.backgroundColor = MultipleThumbnailItem.unselectedColor
+        
+        tagImageView.isHidden = true
         
         let doubleClickGesture = NSClickGestureRecognizer(target: self, action: #selector(onDoubleClick(_:)))
         doubleClickGesture.numberOfClicksRequired = 2

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14810.11"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MultipleThumbnailItem" customModule="YCC_Manager" customModuleProvider="target">
             <connections>
+                <outlet property="tagImageView" destination="5SE-T5-lu1" id="3Hg-yz-bQ3"/>
                 <outlet property="thumbnailView" destination="NKT-id-HPf" id="whF-Cd-Np5"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -19,6 +21,20 @@
             <subviews>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="NKT-id-HPf" customClass="ImagesStackView" customModule="YCC_Manager" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+                    <subviews>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5SE-T5-lu1">
+                            <rect key="frame" x="8" y="216" width="48" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="48" id="Zw6-ha-PrE"/>
+                                <constraint firstAttribute="height" constant="48" id="tD0-3f-wXf"/>
+                            </constraints>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSTouchBarTagIconTemplate" id="W8T-I8-6AM"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="5SE-T5-lu1" firstAttribute="leading" secondItem="NKT-id-HPf" secondAttribute="leading" constant="8" id="UMO-w9-blV"/>
+                        <constraint firstItem="5SE-T5-lu1" firstAttribute="top" secondItem="NKT-id-HPf" secondAttribute="top" constant="8" id="pGd-M8-waQ"/>
+                    </constraints>
                 </customView>
             </subviews>
             <constraints>
@@ -31,11 +47,21 @@
                 <constraint firstItem="NKT-id-HPf" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="jx6-nG-qx7"/>
                 <constraint firstAttribute="bottom" secondItem="NKT-id-HPf" secondAttribute="bottom" id="x6h-mZ-xiB"/>
             </constraints>
+            <point key="canvasLocation" x="139" y="154"/>
         </customView>
         <customObject id="pm7-GS-bPu" customClass="MultipleThumbnailItem" customModule="YCC_Manager" customModuleProvider="target">
             <connections>
                 <outlet property="thumbnailView" destination="NKT-id-HPf" id="NBQ-Q0-3Sb"/>
             </connections>
         </customObject>
+        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="270-zq-TgG">
+            <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="3qf-nT-B3E"/>
+            <point key="canvasLocation" x="114" y="383"/>
+        </imageView>
     </objects>
+    <resources>
+        <image name="NSTouchBarTagIconTemplate" width="23" height="30"/>
+    </resources>
 </document>

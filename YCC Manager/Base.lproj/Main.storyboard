@@ -870,8 +870,8 @@
                                                 <real value="3.4028234663852886e+38"/>
                                             </customSpacing>
                                         </stackView>
-                                        <tokenField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6A3-fp-kbx">
-                                            <rect key="frame" x="276" y="12" width="360" height="24"/>
+                                        <tokenField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6A3-fp-kbx">
+                                            <rect key="frame" x="276" y="12" width="434" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="360" id="ZC5-dK-tEc"/>
                                             </constraints>
@@ -881,27 +881,33 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </tokenFieldCell>
                                         </tokenField>
-                                        <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="12" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="prD-3V-oJ4">
-                                            <rect key="frame" x="668" y="14" width="228" height="21"/>
+                                        <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vWi-FU-sAU">
+                                            <rect key="frame" x="744" y="14" width="152" height="21"/>
                                             <subviews>
-                                                <button horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pli-D5-Kic">
-                                                    <rect key="frame" x="-6" y="-7" width="120" height="32"/>
-                                                    <buttonCell key="cell" type="push" title="Copy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dhJ-vx-ySL">
-                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j4m-l6-6du">
+                                                    <rect key="frame" x="-2" y="1" width="68" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="64" id="woA-mk-7MH"/>
+                                                    </constraints>
+                                                    <buttonCell key="cell" type="check" title="Copy" bezelStyle="regularSquare" imagePosition="left" inset="2" id="RmL-Qo-aaH">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="108-kh-AIX">
-                                                    <rect key="frame" x="114" y="-7" width="120" height="32"/>
-                                                    <buttonCell key="cell" type="push" title="Move" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="phc-Ja-8h3">
+                                                    <rect key="frame" x="66" y="-7" width="92" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="beq-fW-udw"/>
+                                                    </constraints>
+                                                    <buttonCell key="cell" type="push" title="Import" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="phc-Ja-8h3">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="performImport:" target="SqZ-eZ-6kc" id="0nv-Fl-bdc"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="108-kh-AIX" firstAttribute="width" secondItem="pli-D5-Kic" secondAttribute="width" id="W6E-Z5-LGT"/>
-                                            </constraints>
                                             <visibilityPriorities>
                                                 <integer value="1000"/>
                                                 <integer value="1000"/>
@@ -914,7 +920,8 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="6A3-fp-kbx" firstAttribute="centerY" secondItem="xsu-UH-YDT" secondAttribute="centerY" id="06n-Is-9Zl"/>
-                                        <constraint firstItem="prD-3V-oJ4" firstAttribute="leading" secondItem="6A3-fp-kbx" secondAttribute="trailing" constant="32" id="F2T-Uh-iSk"/>
+                                        <constraint firstItem="vWi-FU-sAU" firstAttribute="centerY" secondItem="xsu-UH-YDT" secondAttribute="centerY" id="2ir-QA-aWX"/>
+                                        <constraint firstAttribute="trailing" secondItem="vWi-FU-sAU" secondAttribute="trailing" constant="16" id="8m0-E5-L9i"/>
                                         <constraint firstItem="6A3-fp-kbx" firstAttribute="centerX" secondItem="xsu-UH-YDT" secondAttribute="centerX" id="HVG-GO-xZk"/>
                                         <constraint firstItem="I89-lr-6am" firstAttribute="height" secondItem="kty-lN-57f" secondAttribute="height" id="Rrh-iB-Vo1"/>
                                         <constraint firstItem="ktj-ux-WkE" firstAttribute="centerY" secondItem="xsu-UH-YDT" secondAttribute="centerY" id="TRI-Es-4om"/>
@@ -924,8 +931,6 @@
                                         <constraint firstItem="CQ5-ef-nfI" firstAttribute="height" secondItem="kty-lN-57f" secondAttribute="height" id="hbt-wU-b8f"/>
                                         <constraint firstItem="KBW-52-jV0" firstAttribute="height" secondItem="kty-lN-57f" secondAttribute="height" id="j75-9I-mOa"/>
                                         <constraint firstItem="ktj-ux-WkE" firstAttribute="leading" secondItem="xsu-UH-YDT" secondAttribute="leading" constant="16" id="t8b-yx-yXT"/>
-                                        <constraint firstAttribute="trailing" secondItem="prD-3V-oJ4" secondAttribute="trailing" constant="16" id="vUC-m0-0Z5"/>
-                                        <constraint firstItem="prD-3V-oJ4" firstAttribute="centerY" secondItem="xsu-UH-YDT" secondAttribute="centerY" id="wrd-dO-KMl"/>
                                     </constraints>
                                 </view>
                                 <constraints>
@@ -945,6 +950,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="copyCheckBox" destination="j4m-l6-6du" id="2kW-Fq-yGH"/>
+                        <outlet property="importButton" destination="108-kh-AIX" id="txU-ML-ZBz"/>
                         <outlet property="keywordsTokenField" destination="6A3-fp-kbx" id="d2f-z8-9Zs"/>
                         <outlet property="mergeButton" destination="CQ5-ef-nfI" id="uw0-wL-yKk"/>
                         <outlet property="removeItemsButton" destination="xg3-se-7Uy" id="agk-7L-FKR"/>
