@@ -17,7 +17,11 @@ extension NSUserInterfaceItemIdentifier {
 }
 
 class ImportViewController: NSViewController {
-    var items: [ImportItem] = []
+    var items: [ImportItem] = [] {
+        didSet {
+            validateImport()
+        }
+    }
     
     @IBOutlet weak var thumbnailView: NSCollectionView!
     @IBOutlet weak var mergeButton: NSButton!
@@ -25,13 +29,19 @@ class ImportViewController: NSViewController {
     @IBOutlet weak var removeItemsButton: NSButton!
     
     @IBOutlet weak var keywordsTokenField: NSTokenField!
+    @IBOutlet weak var importButton: NSButton!
+    @IBOutlet weak var copyCheckBox: NSButton!
     
     private var validKeywords: [String] = []
+    
+    var selectedItems: [ImportItem] { items(at: thumbnailView.selectionIndexPaths) }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.wantsLayer = true
+        
+        validateImport()
         
         validateMergeUnmerge()
         validateRemoveItems()
@@ -143,6 +153,18 @@ class ImportViewController: NSViewController {
         thumbnailView.deleteItems(at: selectedIndexpaths)
     }
     
+    @IBAction func performImport(_ sender: Any) {
+        let isCopy = copyCheckBox.state == .on ? true : false
+        print("Copy: \(isCopy)")
+        
+        // Show select dealer modal
+        
+        // When dealer is selected
+        // create coredata models
+        // copy/move images to app folder
+        // rename file to match the uuid of item
+    }
+    
     private func importImages() {
         guard let window = view.window else {
             print("No window to present open panel")
@@ -195,6 +217,7 @@ extension ImportViewController: NSCollectionViewDataSource {
             return viewItem
         }
         
+        thumbnailItem.hasTags = !item.tags.isEmpty
         
         DispatchQueue.global(qos: .userInitiated).async {
             let downsizedImages = item.imageURLs.compactMap {
@@ -224,20 +247,23 @@ extension ImportViewController: NSCollectionViewDelegate {
     }
     
     private func validateTagging() {
-        keywordsTokenField.isEnabled = canTag()
-        let selectedItems = items(at: thumbnailView.selectionIndexPaths)
+        let selectedItems = self.selectedItems
+        keywordsTokenField.isEnabled = selectedItems.canTag
         keywordsTokenField.objectValue = selectedItems.tags
     }
     
     private func validateMergeUnmerge() {
-        let selectedItems = items(at: thumbnailView.selectionIndexPaths)
-        
         unmergeButton.isEnabled = canUnmerge()
         mergeButton.isEnabled = selectedItems.canMerge
     }
     
     private func validateRemoveItems() {
         removeItemsButton.isEnabled = !thumbnailView.selectionIndexPaths.isEmpty
+    }
+    
+    private func validateImport() {
+        copyCheckBox.isEnabled = !items.isEmpty
+        importButton.isEnabled = !items.isEmpty
     }
     
     private func canUnmerge() -> Bool {
@@ -287,6 +313,8 @@ extension ImportViewController: NSTokenFieldDelegate {
         guard let tokenField = obj.object as? NSTokenField else { return }
         let filtered = filteredKeywords(from: tokenField)
         tokenField.objectValue = filtered
+        
+        thumbnailView.reloadItems(at: thumbnailView.selectionIndexPaths)
     }
     
     func controlTextDidChange(_ obj: Notification) {

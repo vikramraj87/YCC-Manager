@@ -182,5 +182,31 @@ class ImportItemTests: XCTestCase {
         XCTAssertEqual([item1, item2, item3, item4].tags, ["One", "Uno"])
     }
     
+    func testItemsCollectionWithNoItemsCanTag() {
+        let emptyItems: [ImportItem] = []
+        XCTAssertFalse(emptyItems.canTag)
+    }
     
+    func testItemsCollectionWithSingleItemCanTag() {
+        let singleItem: [ImportItem] = [item1]
+        XCTAssertTrue(singleItem.canTag)
+    }
+    
+    func testItemsCollectionWithSameTagsCanTag() {
+        item1.tags = ["One", "Uno"]
+        item2.tags = ["Uno", "One"]
+        item3.tags = ["Uno", "One"]
+        item4.tags = ["One", "Uno"]
+        
+        XCTAssertTrue([item1, item2, item3, item4].canTag)
+    }
+    
+    func testItemsCollectionWithDifferentTagsCannotTag() {
+        item1.tags = ["One", "Uno"]
+        item2.tags = ["Uno", "One"]
+        item3.tags = ["Uno", "One"]
+        item4.tags = ["Two", "Duo"]
+        
+        XCTAssertFalse([item1, item2, item3, item4].canTag)
+    }
 }
