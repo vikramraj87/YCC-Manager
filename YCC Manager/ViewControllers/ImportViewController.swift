@@ -23,14 +23,14 @@ class ImportViewController: NSViewController {
         }
     }
     
-    @IBOutlet weak var thumbnailView: NSCollectionView!
-    @IBOutlet weak var mergeButton: NSButton!
-    @IBOutlet weak var unmergeButton: NSButton!
-    @IBOutlet weak var removeItemsButton: NSButton!
+    @IBOutlet var thumbnailView: NSCollectionView!
+    @IBOutlet var mergeButton: NSButton!
+    @IBOutlet var unmergeButton: NSButton!
+    @IBOutlet var removeItemsButton: NSButton!
     
-    @IBOutlet weak var keywordsTokenField: NSTokenField!
-    @IBOutlet weak var importButton: NSButton!
-    @IBOutlet weak var copyCheckBox: NSButton!
+    @IBOutlet var keywordsTokenField: NSTokenField!
+    @IBOutlet var importButton: NSButton!
+    @IBOutlet var copyCheckBox: NSButton!
     
     private var validKeywords: [String] = []
     

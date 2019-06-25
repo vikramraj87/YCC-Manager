@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14838.16" systemVersion="19A471t" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="NO" userDefinedModelVersionIdentifier="">
+    <entity name="Dealer" representedClassName=".DealerMO" syncable="YES">
+        <attribute name="codeMultiplicationFactor" attributeType="Float" defaultValueString="1" usesScalarValueType="YES"/>
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="mobileNumber" attributeType="String" minValueString="6"/>
+        <attribute name="name" attributeType="String" minValueString="3"/>
+        <relationship name="jewels" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Jewel" inverseName="dealer" inverseEntity="Jewel"/>
+    </entity>
+    <entity name="Image" representedClassName=".Image" syncable="YES">
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="jewel" maxCount="1" deletionRule="Nullify" destinationEntity="Jewel" inverseName="images" inverseEntity="Jewel"/>
+    </entity>
+    <entity name="Jewel" representedClassName=".Jewel" syncable="YES">
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="dealer" maxCount="1" deletionRule="Nullify" destinationEntity="Dealer" inverseName="jewels" inverseEntity="Dealer"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Image" inverseName="jewel" inverseEntity="Image"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="jewels" inverseEntity="Tag"/>
+    </entity>
+    <entity name="Tag" representedClassName=".TagMO" syncable="YES">
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="tag" attributeType="String"/>
+        <relationship name="jewels" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Jewel" inverseName="tags" inverseEntity="Jewel"/>
+    </entity>
+    <elements>
+        <element name="Dealer" positionX="317.51171875" positionY="53.69921875" width="128" height="118"/>
+        <element name="Tag" positionX="769.23046875" positionY="269.21484375" width="128" height="88"/>
+        <element name="Jewel" positionX="549.46484375" positionY="204.31640625" width="128" height="103"/>
+        <element name="Image" positionX="317.21875" positionY="260.14453125" width="128" height="73"/>
+    </elements>
+</model>

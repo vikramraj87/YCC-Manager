@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC0A0CB422B86B7600F79DF7 /* DealerMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0A0CB222B86B7600F79DF7 /* DealerMO+CoreDataClass.swift */; };
+		AC20A5AA22BF9814006E519A /* DealerMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20A5A322BF9814006E519A /* DealerMO+CoreDataProperties.swift */; };
+		AC20A5AB22BF9814006E519A /* TagMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20A5A422BF9814006E519A /* TagMO+CoreDataClass.swift */; };
+		AC20A5AC22BF9814006E519A /* TagMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20A5A522BF9814006E519A /* TagMO+CoreDataProperties.swift */; };
+		AC20A5AD22BF9814006E519A /* Jewel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20A5A622BF9814006E519A /* Jewel+CoreDataClass.swift */; };
+		AC20A5AE22BF9814006E519A /* Jewel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20A5A722BF9814006E519A /* Jewel+CoreDataProperties.swift */; };
+		AC20A5AF22BF9814006E519A /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20A5A822BF9814006E519A /* Image+CoreDataClass.swift */; };
+		AC20A5B022BF9814006E519A /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20A5A922BF9814006E519A /* Image+CoreDataProperties.swift */; };
+		AC20A5B222BFD83E006E519A /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20A5B122BFD83E006E519A /* TagsViewController.swift */; };
+		AC20A5B522BFD8A1006E519A /* Dealers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC20A5B422BFD8A1006E519A /* Dealers.storyboard */; };
 		AC2F4ED5229CB7F800531EE4 /* dealers.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC2F4ED4229CB7F800531EE4 /* dealers.plist */; };
 		AC3C8F7F22A5F1C600F95EDA /* SingleThumbnailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3C8F7D22A5F1C600F95EDA /* SingleThumbnailItem.swift */; };
 		AC3C8F8022A5F1C600F95EDA /* SingleThumbnailItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC3C8F7E22A5F1C600F95EDA /* SingleThumbnailItem.xib */; };
@@ -95,10 +105,19 @@
 		AC48E0272292DC9B0097D429 /* PriceableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC48E0262292DC9B0097D429 /* PriceableTests.swift */; };
 		AC4C985A229B74D80081631C /* FilterableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C9859229B74D80081631C /* FilterableTableViewController.swift */; };
 		AC5D671022B2ACB300FB09E9 /* Array+removedElementsAtIndexes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5D670F22B2ACB300FB09E9 /* Array+removedElementsAtIndexes.swift */; };
+		AC5DDBBF22C1AA42005D3026 /* Tags.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5DDBBE22C1AA42005D3026 /* Tags.storyboard */; };
+		AC5DDBC122C1AC7E005D3026 /* EditTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5DDBC022C1AC7E005D3026 /* EditTagViewController.swift */; };
+		AC65170322BDC339006C1B29 /* TableViewFetchedResultsControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65170222BDC339006C1B29 /* TableViewFetchedResultsControllerDelegate.swift */; };
+		AC65170522BDC564006C1B29 /* TableViewFetchedResultsControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65170422BDC564006C1B29 /* TableViewFetchedResultsControllerDataSource.swift */; };
 		AC6779D822B1CF2C00C902D9 /* ImageDownSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6779D722B1CF2C00C902D9 /* ImageDownSampler.swift */; };
 		AC6779DA22B1D03300C902D9 /* FileManager+contentsOfFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6779D922B1D03300C902D9 /* FileManager+contentsOfFolder.swift */; };
 		AC6779DC22B1D0F500C902D9 /* ImportItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6779DB22B1D0F500C902D9 /* ImportItem.swift */; };
+		AC6BF04E22B699C3002FFFB3 /* DealersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BF04D22B699C3002FFFB3 /* DealersViewController.swift */; };
 		AC71506B22B407DB00B7746E /* ImportItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71506A22B407DB00B7746E /* ImportItemTests.swift */; };
+		AC74582822B5F2F500F9BB07 /* EditDealerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC74582722B5F2F500F9BB07 /* EditDealerViewController.swift */; };
+		AC74582A22B5F96F00F9BB07 /* IntegerOnlyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC74582922B5F96F00F9BB07 /* IntegerOnlyFormatter.swift */; };
+		AC7E82D722B7C8F000E9F327 /* YCCData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC7E82D522B7C8F000E9F327 /* YCCData.xcdatamodeld */; };
+		AC7E82D922B7C8FF00E9F327 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7E82D822B7C8FF00E9F327 /* DataController.swift */; };
 		ACC7129722799391002C1471 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7129622799391002C1471 /* AppDelegate.swift */; };
 		ACC7129922799391002C1471 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7129822799391002C1471 /* ViewController.swift */; };
 		ACC7129B22799393002C1471 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC7129A22799393002C1471 /* Assets.xcassets */; };
@@ -126,6 +145,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC0A0CB222B86B7600F79DF7 /* DealerMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DealerMO+CoreDataClass.swift"; path = "YCC Manager/Core Data/ManagedObjects/DealerMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AC20A5A322BF9814006E519A /* DealerMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DealerMO+CoreDataProperties.swift"; path = "YCC Manager/Core Data/ManagedObjects/DealerMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AC20A5A422BF9814006E519A /* TagMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TagMO+CoreDataClass.swift"; path = "YCC Manager/Core Data/ManagedObjects/TagMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AC20A5A522BF9814006E519A /* TagMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TagMO+CoreDataProperties.swift"; path = "YCC Manager/Core Data/ManagedObjects/TagMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AC20A5A622BF9814006E519A /* Jewel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Jewel+CoreDataClass.swift"; path = "YCC Manager/Core Data/ManagedObjects/Jewel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AC20A5A722BF9814006E519A /* Jewel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Jewel+CoreDataProperties.swift"; path = "YCC Manager/Core Data/ManagedObjects/Jewel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AC20A5A822BF9814006E519A /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Image+CoreDataClass.swift"; path = "YCC Manager/Core Data/ManagedObjects/Image+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AC20A5A922BF9814006E519A /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Image+CoreDataProperties.swift"; path = "YCC Manager/Core Data/ManagedObjects/Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AC20A5B122BFD83E006E519A /* TagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
+		AC20A5B422BFD8A1006E519A /* Dealers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dealers.storyboard; sourceTree = "<group>"; };
 		AC2BCF58229AEA9B0099E48F /* Filterable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Filterable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		AC2F4ED4229CB7F800531EE4 /* dealers.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = dealers.plist; sourceTree = "<group>"; };
 		AC3C8F7D22A5F1C600F95EDA /* SingleThumbnailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleThumbnailItem.swift; sourceTree = "<group>"; };
@@ -216,11 +245,20 @@
 		AC48E028229627370097D429 /* Ideas.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ideas.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		AC4C9859229B74D80081631C /* FilterableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterableTableViewController.swift; sourceTree = "<group>"; };
 		AC5D670F22B2ACB300FB09E9 /* Array+removedElementsAtIndexes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+removedElementsAtIndexes.swift"; sourceTree = "<group>"; };
+		AC5DDBBE22C1AA42005D3026 /* Tags.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tags.storyboard; sourceTree = "<group>"; };
+		AC5DDBC022C1AC7E005D3026 /* EditTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTagViewController.swift; sourceTree = "<group>"; };
+		AC65170222BDC339006C1B29 /* TableViewFetchedResultsControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewFetchedResultsControllerDelegate.swift; sourceTree = "<group>"; };
+		AC65170422BDC564006C1B29 /* TableViewFetchedResultsControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewFetchedResultsControllerDataSource.swift; sourceTree = "<group>"; };
 		AC6779D722B1CF2C00C902D9 /* ImageDownSampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownSampler.swift; sourceTree = "<group>"; };
 		AC6779D922B1D03300C902D9 /* FileManager+contentsOfFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+contentsOfFolder.swift"; sourceTree = "<group>"; };
 		AC6779DB22B1D0F500C902D9 /* ImportItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportItem.swift; sourceTree = "<group>"; };
+		AC6BF04D22B699C3002FFFB3 /* DealersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealersViewController.swift; sourceTree = "<group>"; };
 		AC71506A22B407DB00B7746E /* ImportItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportItemTests.swift; sourceTree = "<group>"; };
+		AC74582722B5F2F500F9BB07 /* EditDealerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDealerViewController.swift; sourceTree = "<group>"; };
+		AC74582922B5F96F00F9BB07 /* IntegerOnlyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegerOnlyFormatter.swift; sourceTree = "<group>"; };
 		AC78B28E22AFE27300454396 /* TODO_Next.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO_Next.md; sourceTree = "<group>"; };
+		AC7E82D622B7C8F000E9F327 /* YCCData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YCCData.xcdatamodel; sourceTree = "<group>"; };
+		AC7E82D822B7C8FF00E9F327 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		ACC7129322799391002C1471 /* YCC Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YCC Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC7129622799391002C1471 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACC7129822799391002C1471 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -262,6 +300,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC0A0CAD22B86AA700F79DF7 /* ManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ManagedObjects;
+			sourceTree = "<group>";
+		};
+		AC20A5B322BFD878006E519A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				ACC7129C22799393002C1471 /* Main.storyboard */,
+				AC20A5B422BFD8A1006E519A /* Dealers.storyboard */,
+				AC5DDBBE22C1AA42005D3026 /* Tags.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		AC2BCF55229AE9F70099E48F /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +424,10 @@
 				AC4C9859229B74D80081631C /* FilterableTableViewController.swift */,
 				AC48A93A22A1F9C8000B3DD7 /* ImportViewController.swift */,
 				AC3C8F8122A5F28E00F95EDA /* MultipleThumbnailPreviewViewController.swift */,
+				AC74582722B5F2F500F9BB07 /* EditDealerViewController.swift */,
+				AC6BF04D22B699C3002FFFB3 /* DealersViewController.swift */,
+				AC20A5B122BFD83E006E519A /* TagsViewController.swift */,
+				AC5DDBC022C1AC7E005D3026 /* EditTagViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -379,6 +438,9 @@
 				AC6779D722B1CF2C00C902D9 /* ImageDownSampler.swift */,
 				AC6779D922B1D03300C902D9 /* FileManager+contentsOfFolder.swift */,
 				AC5D670F22B2ACB300FB09E9 /* Array+removedElementsAtIndexes.swift */,
+				AC74582922B5F96F00F9BB07 /* IntegerOnlyFormatter.swift */,
+				AC65170222BDC339006C1B29 /* TableViewFetchedResultsControllerDelegate.swift */,
+				AC65170422BDC564006C1B29 /* TableViewFetchedResultsControllerDataSource.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -388,6 +450,16 @@
 			children = (
 			);
 			path = Operations;
+			sourceTree = "<group>";
+		};
+		AC7E82D422B7C8CB00E9F327 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				AC0A0CAD22B86AA700F79DF7 /* ManagedObjects */,
+				AC7E82D522B7C8F000E9F327 /* YCCData.xcdatamodeld */,
+				AC7E82D822B7C8FF00E9F327 /* DataController.swift */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 		AC9E84122291BFA100D1F076 /* Models */ = {
@@ -411,6 +483,14 @@
 		ACC7128A22799391002C1471 = {
 			isa = PBXGroup;
 			children = (
+				AC20A5A422BF9814006E519A /* TagMO+CoreDataClass.swift */,
+				AC20A5A522BF9814006E519A /* TagMO+CoreDataProperties.swift */,
+				AC20A5A622BF9814006E519A /* Jewel+CoreDataClass.swift */,
+				AC20A5A722BF9814006E519A /* Jewel+CoreDataProperties.swift */,
+				AC20A5A822BF9814006E519A /* Image+CoreDataClass.swift */,
+				AC20A5A922BF9814006E519A /* Image+CoreDataProperties.swift */,
+				AC0A0CB222B86B7600F79DF7 /* DealerMO+CoreDataClass.swift */,
+				AC20A5A322BF9814006E519A /* DealerMO+CoreDataProperties.swift */,
 				ACC7129522799391002C1471 /* YCC Manager */,
 				ACC712A822799393002C1471 /* YCC ManagerTests */,
 				ACC712B322799393002C1471 /* YCC ManagerUITests */,
@@ -431,6 +511,7 @@
 		ACC7129522799391002C1471 /* YCC Manager */ = {
 			isa = PBXGroup;
 			children = (
+				AC7E82D422B7C8CB00E9F327 /* Core Data */,
 				AC6779D622B1CF0000C902D9 /* Utilities */,
 				AC78B28F22AFE4C000454396 /* Operations */,
 				AC2F4ED3229CB7E000531EE4 /* Fake Data */,
@@ -441,7 +522,7 @@
 				ACC7129622799391002C1471 /* AppDelegate.swift */,
 				ACC7129822799391002C1471 /* ViewController.swift */,
 				ACC7129A22799393002C1471 /* Assets.xcassets */,
-				ACC7129C22799393002C1471 /* Main.storyboard */,
+				AC20A5B322BFD878006E519A /* Storyboards */,
 				ACC7129F22799393002C1471 /* Info.plist */,
 				ACC712A022799393002C1471 /* YCC_Manager.entitlements */,
 				AC78B28E22AFE27300454396 /* TODO_Next.md */,
@@ -623,6 +704,7 @@
 				AC48A91E22A1F956000B3DD7 /* jewel36.jpg in Resources */,
 				AC48A92722A1F956000B3DD7 /* jewel37.jpg in Resources */,
 				AC48A8F722A1F956000B3DD7 /* jewel64.jpg in Resources */,
+				AC5DDBBF22C1AA42005D3026 /* Tags.storyboard in Resources */,
 				AC48A8FF22A1F956000B3DD7 /* jewel46.jpg in Resources */,
 				AC48A91C22A1F956000B3DD7 /* jewel30.jpg in Resources */,
 				AC48A91D22A1F956000B3DD7 /* jewel23.jpg in Resources */,
@@ -655,6 +737,7 @@
 				AC48A91122A1F956000B3DD7 /* jewel2.jpg in Resources */,
 				AC48A92922A1F956000B3DD7 /* jewel40.jpg in Resources */,
 				AC48A8F222A1F956000B3DD7 /* jewel56.jpg in Resources */,
+				AC20A5B522BFD8A1006E519A /* Dealers.storyboard in Resources */,
 				AC48A91022A1F956000B3DD7 /* jewel27.jpg in Resources */,
 				AC48A8F522A1F956000B3DD7 /* jewel59.jpg in Resources */,
 				AC48A90422A1F956000B3DD7 /* jewel47.jpg in Resources */,
@@ -693,18 +776,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC20A5AC22BF9814006E519A /* TagMO+CoreDataProperties.swift in Sources */,
 				AC6779D822B1CF2C00C902D9 /* ImageDownSampler.swift in Sources */,
+				AC6BF04E22B699C3002FFFB3 /* DealersViewController.swift in Sources */,
+				AC65170522BDC564006C1B29 /* TableViewFetchedResultsControllerDataSource.swift in Sources */,
 				AC4C985A229B74D80081631C /* FilterableTableViewController.swift in Sources */,
 				ACC7129922799391002C1471 /* ViewController.swift in Sources */,
 				AC3C8F8222A5F28E00F95EDA /* MultipleThumbnailPreviewViewController.swift in Sources */,
+				AC20A5AD22BF9814006E519A /* Jewel+CoreDataClass.swift in Sources */,
 				AC48A94222A1FC5E000B3DD7 /* MultipleThumbnailItem.swift in Sources */,
 				AC48A8A0229D67C5000B3DD7 /* FilterableContentCellView.swift in Sources */,
+				AC5DDBC122C1AC7E005D3026 /* EditTagViewController.swift in Sources */,
+				AC20A5AB22BF9814006E519A /* TagMO+CoreDataClass.swift in Sources */,
+				AC7E82D722B7C8F000E9F327 /* YCCData.xcdatamodeld in Sources */,
 				AC48E0232292DC4D0097D429 /* Priceable.swift in Sources */,
 				ACF991C0229A4DCC00C40A04 /* ImagesStack.swift in Sources */,
+				AC7E82D922B7C8FF00E9F327 /* DataController.swift in Sources */,
 				AC3C8F7F22A5F1C600F95EDA /* SingleThumbnailItem.swift in Sources */,
+				AC74582A22B5F96F00F9BB07 /* IntegerOnlyFormatter.swift in Sources */,
+				AC20A5B222BFD83E006E519A /* TagsViewController.swift in Sources */,
+				AC20A5AA22BF9814006E519A /* DealerMO+CoreDataProperties.swift in Sources */,
+				AC74582822B5F2F500F9BB07 /* EditDealerViewController.swift in Sources */,
 				ACC7129722799391002C1471 /* AppDelegate.swift in Sources */,
 				AC6779DA22B1D03300C902D9 /* FileManager+contentsOfFolder.swift in Sources */,
+				AC0A0CB422B86B7600F79DF7 /* DealerMO+CoreDataClass.swift in Sources */,
 				AC5D671022B2ACB300FB09E9 /* Array+removedElementsAtIndexes.swift in Sources */,
+				AC20A5AF22BF9814006E519A /* Image+CoreDataClass.swift in Sources */,
+				AC65170322BDC339006C1B29 /* TableViewFetchedResultsControllerDelegate.swift in Sources */,
+				AC20A5B022BF9814006E519A /* Image+CoreDataProperties.swift in Sources */,
+				AC20A5AE22BF9814006E519A /* Jewel+CoreDataProperties.swift in Sources */,
 				AC48A93B22A1F9C8000B3DD7 /* ImportViewController.swift in Sources */,
 				AC6779DC22B1D0F500C902D9 /* ImportItem.swift in Sources */,
 			);
@@ -806,7 +906,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -861,7 +961,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -1026,6 +1126,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AC7E82D522B7C8F000E9F327 /* YCCData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AC7E82D622B7C8F000E9F327 /* YCCData.xcdatamodel */,
+			);
+			currentVersion = AC7E82D622B7C8F000E9F327 /* YCCData.xcdatamodel */;
+			path = YCCData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = ACC7128B22799391002C1471 /* Project object */;
 }

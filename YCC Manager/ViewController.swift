@@ -15,12 +15,6 @@ struct Dealer {
     var mobileNumber: String
 }
 
-enum PlistDataError: Error {
-    case invalidFile
-    case invalidData
-}
-
-
 extension Dealer: FilterableTableContent {
     var primaryField: String {
         return name
