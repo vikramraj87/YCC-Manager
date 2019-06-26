@@ -2,7 +2,7 @@
 //  DuplicateChecker.swift
 //  YCC Manager
 //
-//  Created by Vikram Raj Gopinathan on 25/06/19.
+//  Created by Vikram Raj Gopinathan on 26/06/19.
 //  Copyright © 2019 Vikram Raj Gopinathan. All rights reserved.
 //
 
@@ -27,7 +27,7 @@ class DuplicateChecker<T: NSManagedObject> {
             predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [
                 predicate,
                 objectPredicte
-            ])
+                ])
         }
         
         // Configure fetch request to find duplicate
@@ -41,5 +41,3 @@ class DuplicateChecker<T: NSManagedObject> {
         return fetchedObjectsCount > 0
     }
 }
-
-

@@ -16,3 +16,9 @@ public class TagMO: NSManagedObject {
         setPrimitiveValue(Date(), forKey: "createdAt")
     }
 }
+
+extension TagMO: UniqueObject {
+    var uniquePredicate: NSPredicate {
+        return NSPredicate(format: "tag ==[c] %@", self.tag)
+    }
+}

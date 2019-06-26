@@ -2,7 +2,7 @@
 //  DealerMO+CoreDataProperties.swift
 //  YCC Manager
 //
-//  Created by Vikram Raj Gopinathan on 23/06/19.
+//  Created by Vikram Raj Gopinathan on 26/06/19.
 //  Copyright © 2019 Vikram Raj Gopinathan. All rights reserved.
 //
 //

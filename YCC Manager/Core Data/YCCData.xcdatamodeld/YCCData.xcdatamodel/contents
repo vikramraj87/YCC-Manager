@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14838.16" systemVersion="19A471t" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="NO" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14838.16" systemVersion="19A487l" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="NO" userDefinedModelVersionIdentifier="">
     <entity name="Dealer" representedClassName=".DealerMO" syncable="YES">
         <attribute name="codeMultiplicationFactor" attributeType="Float" defaultValueString="1" usesScalarValueType="YES"/>
         <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
@@ -24,8 +24,8 @@
     </entity>
     <elements>
         <element name="Dealer" positionX="317.51171875" positionY="53.69921875" width="128" height="118"/>
-        <element name="Tag" positionX="769.23046875" positionY="269.21484375" width="128" height="88"/>
-        <element name="Jewel" positionX="549.46484375" positionY="204.31640625" width="128" height="103"/>
         <element name="Image" positionX="317.21875" positionY="260.14453125" width="128" height="73"/>
+        <element name="Jewel" positionX="549.46484375" positionY="204.31640625" width="128" height="103"/>
+        <element name="Tag" positionX="769.23046875" positionY="269.21484375" width="128" height="88"/>
     </elements>
 </model>

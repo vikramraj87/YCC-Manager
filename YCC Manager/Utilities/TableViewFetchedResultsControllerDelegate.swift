@@ -31,16 +31,28 @@ extension TableViewFetchedResultsControllerDelegate: NSFetchedResultsControllerD
         switch type {
         case .insert:
             if let insertedIndexPath = newIndexPath {
-                tableView.insertRows(at: IndexSet(integer: insertedIndexPath.item), withAnimation: .effectFade)
+                tableView.insertRows(at: IndexSet(integer: insertedIndexPath.item),
+                                     withAnimation: .effectFade)
             }
         case .delete:
             if let deletedIndexPath = indexPath {
-                tableView.removeRows(at: IndexSet(integer: deletedIndexPath.item), withAnimation: .effectFade)
+                tableView.removeRows(at: IndexSet(integer: deletedIndexPath.item),
+                                     withAnimation: .effectFade)
             }
         case .update:
             if let updatedIndexPath = indexPath {
-                tableView.reloadData(forRowIndexes: IndexSet(integer: updatedIndexPath.item),
-                                            columnIndexes: IndexSet(integersIn: 0..<tableView.numberOfColumns))
+                let rowIndexes = IndexSet(integer: updatedIndexPath.item)
+                let colIndexes = IndexSet(integersIn: 0..<tableView.numberOfColumns)
+                tableView.reloadData(forRowIndexes: rowIndexes,
+                                     columnIndexes: colIndexes)
+            }
+        case .move:
+            if let fromIndexPath = indexPath,
+                let toIndexPath = newIndexPath {
+                tableView.removeRows(at: IndexSet(integer: fromIndexPath.item),
+                                     withAnimation: .effectFade)
+                tableView.insertRows(at: IndexSet(integer: toIndexPath.item),
+                                     withAnimation: .effectFade)
             }
         default:
             break
