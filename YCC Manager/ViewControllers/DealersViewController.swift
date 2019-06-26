@@ -25,6 +25,12 @@ class DealersViewController: NSViewController {
     
     var dataSource: TableViewFetchedResultsControllerDataSource<DealerMO>?
     
+    lazy var duplicateChecker: DuplicateChecker<DealerMO> = {
+        let dc = DuplicateChecker<DealerMO>(context: DataController.shared.viewContext,
+                                         predicateFormat: "mobileNumber ==[c] %@")
+        return dc
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -145,7 +151,7 @@ extension DealersViewController: NSTableViewDelegate {
 
 extension DealersViewController: EditDealerViewControllerDelegate {
     func addDealerWithName(_ name: String, mobileNumber: String) {
-        if isDuplicate(name: name, mobile: mobileNumber, dealer: nil) {
+        if isDuplicate(mobile: mobileNumber, dealer: nil) {
             showDuplicateAlert()
             return
         }
@@ -158,7 +164,7 @@ extension DealersViewController: EditDealerViewControllerDelegate {
     }
     
     func updatedDealer(_ dealer: DealerMO, name: String, mobileNumber: String) {
-        if isDuplicate(name: name, mobile: mobileNumber, dealer: dealer) {
+        if isDuplicate(mobile: mobileNumber, dealer: dealer) {
             showDuplicateAlert()
             return
         }
@@ -167,40 +173,20 @@ extension DealersViewController: EditDealerViewControllerDelegate {
         DataController.shared.saveDefaultContext()
     }
     
-    private func isDuplicate(name: String, mobile: String, dealer: DealerMO?) -> Bool {
-        let fetchRequest: NSFetchRequest<DealerMO> = DealerMO.fetchRequest()
-        let mobileNumberPredicate = NSPredicate(format: "%K ==[c] %@", "mobileNumber", mobile)
-        fetchRequest.predicate = mobileNumberPredicate
-        
-        let context = DataController.shared.viewContext
-        var fetchedDealers: [DealerMO] = []
+    private func isDuplicate(mobile: String, dealer: DealerMO?) -> Bool {
+        var isDuplicate = true
         do {
-            fetchedDealers = try context.fetch(fetchRequest)
+            isDuplicate = try duplicateChecker.isDuplicateValue(mobile, objectUpdated: dealer)
         } catch {
-            print("Error checking duplicate dealer: \(error)")
+            print("Error checking for duplicate dealer: \(error)")
         }
-        
-        // Zero Dealers returned. No duplicate
-        if fetchedDealers.isEmpty { return false }
-        
-        // 1 or more dealers with same mobile numner
-        // If this is not edit mode then duplicate
-        guard let dealerToEdit = dealer else { return true }
-        
-        // Check the returned dealer is the same as the
-        // dealer to edit. If so not duplicate
-        // else duplicate
-        let fetchedDealer = fetchedDealers.first!
-        return fetchedDealer.objectID != dealerToEdit.objectID
+        return isDuplicate
     }
     
     private func showDuplicateAlert() {
         guard let window = view.window else { return }
-        let alert = NSAlert()
-        alert.messageText = "Duplicate Mobile Number"
-        alert.informativeText = "Cannot add/update dealer. The mobile number provided is already associated with another dealer."
-        alert.alertStyle = .informational
-        alert.addButton(withTitle: "Ok")
-        alert.beginSheetModal(for: window, completionHandler: nil)
+        NSAlert.showInfo(message: "Duplicate mobile number",
+                         detail: "Cannot add/update dealer. Mobile number provided is already associated with another dealer.",
+                         window: window)
     }
 }

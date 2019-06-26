@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AC0A0CB422B86B7600F79DF7 /* DealerMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0A0CB222B86B7600F79DF7 /* DealerMO+CoreDataClass.swift */; };
+		AC1CF68122C2845E004995D6 /* DuplicateChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1CF68022C2845E004995D6 /* DuplicateChecker.swift */; };
+		AC1CF68322C2F741004995D6 /* NSAlert+showInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1CF68222C2F741004995D6 /* NSAlert+showInfo.swift */; };
 		AC20A5AA22BF9814006E519A /* DealerMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20A5A322BF9814006E519A /* DealerMO+CoreDataProperties.swift */; };
 		AC20A5AB22BF9814006E519A /* TagMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20A5A422BF9814006E519A /* TagMO+CoreDataClass.swift */; };
 		AC20A5AC22BF9814006E519A /* TagMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20A5A522BF9814006E519A /* TagMO+CoreDataProperties.swift */; };
@@ -146,6 +148,8 @@
 
 /* Begin PBXFileReference section */
 		AC0A0CB222B86B7600F79DF7 /* DealerMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DealerMO+CoreDataClass.swift"; path = "YCC Manager/Core Data/ManagedObjects/DealerMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AC1CF68022C2845E004995D6 /* DuplicateChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateChecker.swift; sourceTree = "<group>"; };
+		AC1CF68222C2F741004995D6 /* NSAlert+showInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAlert+showInfo.swift"; sourceTree = "<group>"; };
 		AC20A5A322BF9814006E519A /* DealerMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DealerMO+CoreDataProperties.swift"; path = "YCC Manager/Core Data/ManagedObjects/DealerMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AC20A5A422BF9814006E519A /* TagMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TagMO+CoreDataClass.swift"; path = "YCC Manager/Core Data/ManagedObjects/TagMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AC20A5A522BF9814006E519A /* TagMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TagMO+CoreDataProperties.swift"; path = "YCC Manager/Core Data/ManagedObjects/TagMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -441,6 +445,8 @@
 				AC74582922B5F96F00F9BB07 /* IntegerOnlyFormatter.swift */,
 				AC65170222BDC339006C1B29 /* TableViewFetchedResultsControllerDelegate.swift */,
 				AC65170422BDC564006C1B29 /* TableViewFetchedResultsControllerDataSource.swift */,
+				AC1CF68022C2845E004995D6 /* DuplicateChecker.swift */,
+				AC1CF68222C2F741004995D6 /* NSAlert+showInfo.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -777,6 +783,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC20A5AC22BF9814006E519A /* TagMO+CoreDataProperties.swift in Sources */,
+				AC1CF68122C2845E004995D6 /* DuplicateChecker.swift in Sources */,
 				AC6779D822B1CF2C00C902D9 /* ImageDownSampler.swift in Sources */,
 				AC6BF04E22B699C3002FFFB3 /* DealersViewController.swift in Sources */,
 				AC65170522BDC564006C1B29 /* TableViewFetchedResultsControllerDataSource.swift in Sources */,
@@ -797,6 +804,7 @@
 				AC20A5B222BFD83E006E519A /* TagsViewController.swift in Sources */,
 				AC20A5AA22BF9814006E519A /* DealerMO+CoreDataProperties.swift in Sources */,
 				AC74582822B5F2F500F9BB07 /* EditDealerViewController.swift in Sources */,
+				AC1CF68322C2F741004995D6 /* NSAlert+showInfo.swift in Sources */,
 				ACC7129722799391002C1471 /* AppDelegate.swift in Sources */,
 				AC6779DA22B1D03300C902D9 /* FileManager+contentsOfFolder.swift in Sources */,
 				AC0A0CB422B86B7600F79DF7 /* DealerMO+CoreDataClass.swift in Sources */,

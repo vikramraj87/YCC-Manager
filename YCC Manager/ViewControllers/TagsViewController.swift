@@ -21,6 +21,12 @@ class TagsViewController: NSViewController {
     
     var dataSource: TableViewFetchedResultsControllerDataSource<TagMO>?
     
+    lazy var duplicateChecker: DuplicateChecker<TagMO> = {
+        let dc = DuplicateChecker<TagMO>(context: DataController.shared.viewContext,
+                                         predicateFormat: "tag ==[c] %@")
+        return dc
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -149,40 +155,20 @@ extension TagsViewController: EditTagViewControllerDelegate {
     }
     
     private func isDuplicate(name: String, tag: TagMO?) -> Bool {
-        // Configure fetch request to find duplicate
-        let fetchRequest: NSFetchRequest<TagMO> = TagMO.fetchRequest()
-        let tagPredicate = NSPredicate(format: "%K ==[c] %@", "tag", name)
-        fetchRequest.predicate = tagPredicate
-        
-        let context = DataController.shared.viewContext
-        var fetchedTags: [TagMO] = []
+        var isDuplicate = true
         do {
-            fetchedTags = try context.fetch(fetchRequest)
+            isDuplicate = try duplicateChecker.isDuplicateValue(name, objectUpdated: tag)
         } catch {
-            print("Error checking duplicate tag: \(error)")
+            print("Error checking for duplicate tag: \(error)")
         }
-        
-        // Zero tags returned. No duplicate
-        if fetchedTags.isEmpty { return false }
-        
-        // 1 or more tags with same name
-        // if this is not edit mode, then duplicate entry
-        guard let tagToEdit = tag else { return true }
-        
-        // Check the returned tag is the same as
-        // tag to edit. If so not duplicate
-        // else duplicate
-        let fetchedTag = fetchedTags.first!
-        return fetchedTag.objectID != tagToEdit.objectID
+        return isDuplicate
     }
     
     private func showDuplicateAlert() {
         guard let window = view.window else { return }
-        let alert = NSAlert()
-        alert.messageText = "Duplicate Tag"
-        alert.informativeText = "Cannot add/update tag. Tag already exists"
-        alert.alertStyle = .informational
-        alert.addButton(withTitle: "Ok")
-        alert.beginSheetModal(for: window, completionHandler: nil)
+        
+        NSAlert.showInfo(message: "Duplicate Tag",
+                         detail: "Cannot add/update tag. Tag already exists",
+                         window: window)
     }
 }
