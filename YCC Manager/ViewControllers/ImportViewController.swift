@@ -16,6 +16,12 @@ extension NSUserInterfaceItemIdentifier {
     static let multipleThumbnailItem = NSUserInterfaceItemIdentifier("MultipleThumbnailItem")
 }
 
+extension NSStoryboardSegue.Identifier {
+    static let tagsTokenVC = NSStoryboardSegue.Identifier(stringLiteral: "EmbedTagsTokenViewController")
+    static let selectDealerVC = NSStoryboardSegue.Identifier(stringLiteral: "SelectDealerSegue")
+    static let importProgressVC = NSStoryboardSegue.Identifier(stringLiteral: "ImportProgressVC")
+}
+
 class ImportViewController: NSViewController {
     var items: [ImportItem] = [] {
         didSet {
@@ -28,13 +34,14 @@ class ImportViewController: NSViewController {
     @IBOutlet var unmergeButton: NSButton!
     @IBOutlet var removeItemsButton: NSButton!
     
-    @IBOutlet var keywordsTokenField: NSTokenField!
     @IBOutlet var importButton: NSButton!
     @IBOutlet var copyCheckBox: NSButton!
     
-    private var validKeywords: [String] = []
+    var tagsTokenViewController: TagsTokenViewController!
     
     var selectedItems: [ImportItem] { items(at: thumbnailView.selectionIndexPaths) }
+    
+    var selectedDealer: DealerMO?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,25 +52,8 @@ class ImportViewController: NSViewController {
         
         validateMergeUnmerge()
         validateRemoveItems()
-        validateTagging()
         
         configureCollectionView(thumbnailView)
-        configureTokenField(keywordsTokenField)
-    }
-    
-    private func configureTokenField(_ tokenField: NSTokenField) {
-        tokenField.delegate = self
-        
-        // Load valid keywords from database
-        validKeywords = [
-            "Ring", "AD Stone", "Matt finish",
-            "Haaram", "Necklace", "Antique finish",
-            "Hip belt", "Hip chain", "Bridal set",
-            "Dual set", "Bracelet", "Toe ring",
-            "Oxidised jewellery"
-        ]
-
-        // TODO: Observe changes in keywords to update the list
     }
     
     private func configureCollectionView(_ collectionView: NSCollectionView) {
@@ -143,7 +133,7 @@ class ImportViewController: NSViewController {
     }
     
     @IBAction func addImages(_ sender: Any) {
-        importImages()
+        showOpenPanel()
     }
     
     @IBAction func removeImages(_ sender: Any) {
@@ -157,15 +147,10 @@ class ImportViewController: NSViewController {
         let isCopy = copyCheckBox.state == .on ? true : false
         print("Copy: \(isCopy)")
         
-        // Show select dealer modal
-        
-        // When dealer is selected
-        // create coredata models
-        // copy/move images to app folder
-        // rename file to match the uuid of item
+        performSegue(withIdentifier: .selectDealerVC, sender: sender)
     }
     
-    private func importImages() {
+    private func showOpenPanel() {
         guard let window = view.window else {
             print("No window to present open panel")
             return
@@ -200,6 +185,52 @@ class ImportViewController: NSViewController {
         items.append(contentsOf: newItems)
         thumbnailView.reloadData()
     }
+    
+    // Configure the embedded Tags token view controller
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        guard let segueIdentifier = segue.identifier else { return }
+        
+        if segueIdentifier == .tagsTokenVC {
+            configureEmbedTagsTokenSegue(segue)
+            return
+        }
+        
+        if segueIdentifier == .selectDealerVC {
+            configureSelectDealerSegue(segue)
+            return
+        }
+        
+        if segueIdentifier == .importProgressVC {
+            configureImportProgessSegue(segue)
+            return
+        }
+    }
+    
+    private func configureEmbedTagsTokenSegue(_ segue: NSStoryboardSegue) {
+        guard let tagsTokenVC = segue.destinationController as? TagsTokenViewController else { return }
+        
+        self.tagsTokenViewController = tagsTokenVC
+        tagsTokenVC.delegate = self
+    }
+    
+    private func configureSelectDealerSegue(_ segue: NSStoryboardSegue) {
+        guard let selectDealerVC = segue.destinationController as? SelectDealerViewController else { return }
+        
+        selectDealerVC.actionTitle = "Import \(items.count) items"
+        selectDealerVC.delegate = self
+    }
+    
+    private func configureImportProgessSegue(_ segue: NSStoryboardSegue) {
+        guard items.count > 0,
+            let dealer = selectedDealer,
+            let importProgressVC = segue.destinationController as? ImportProgressViewController else {
+                return
+        }
+        
+        importProgressVC.items = items
+        importProgressVC.selectedDealer = dealer
+        importProgressVC.isCopy = (copyCheckBox.state == .on)
+    }
 }
 
 extension ImportViewController: NSCollectionViewDataSource {
@@ -210,20 +241,28 @@ extension ImportViewController: NSCollectionViewDataSource {
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         let item = self.items[indexPath.item]
         
-
         let viewItem = collectionView.makeItem(withIdentifier: .multipleThumbnailItem, for: indexPath)
-        guard let thumbnailItem = viewItem as? MultipleThumbnailItem else {
-            print("Cannot get multiple thumbnail item")
-            return viewItem
-        }
+        guard let thumbnailItem = viewItem as? MultipleThumbnailItem else { return viewItem }
         
+        // Indicates whether item has tags or not with an icon
         thumbnailItem.hasTags = !item.tags.isEmpty
         
+        // If thumbnails are cached, use them
+        if let thumbnails = item.thumbnails {
+            thumbnailItem.thumbnails = thumbnails
+            return thumbnailItem
+        }
+        
+        // If no thumbnails exist, manually create them
         DispatchQueue.global(qos: .userInitiated).async {
             let downsizedImages = item.imageURLs.compactMap {
                 ImageDownSampler.downsample(imageAt: $0, to: 500)
             }
+            
             DispatchQueue.main.async {
+                // items DidSet changes enabled state of import button
+                // hence mutated (thumbnails cached) in main queue
+                self.items[indexPath.item].thumbnails = downsizedImages
                 thumbnailItem.thumbnails = downsizedImages
             }
         }
@@ -248,8 +287,8 @@ extension ImportViewController: NSCollectionViewDelegate {
     
     private func validateTagging() {
         let selectedItems = self.selectedItems
-        keywordsTokenField.isEnabled = selectedItems.canTag
-        keywordsTokenField.objectValue = selectedItems.tags
+        tagsTokenViewController.isEnabled = selectedItems.canTag
+        tagsTokenViewController.configure(for: selectedItems.tags)
     }
     
     private func validateMergeUnmerge() {
@@ -270,23 +309,30 @@ extension ImportViewController: NSCollectionViewDelegate {
         if thumbnailView.selectionIndexPaths.count != 1 {
             return false
         }
-        
         let selectedItem = item(at: thumbnailView.selectionIndexPaths.first!)
-        
         return selectedItem.hasMultipleImages
     }
     
     private func canTag() -> Bool {
         let selectedIndexPaths = thumbnailView.selectionIndexPaths
-        
         guard !selectedIndexPaths.isEmpty else { return false }
-        
         if selectedIndexPaths.count == 1 { return true }
-        
         return items(at: selectedIndexPaths).hasSameTags
     }
+}
+
+extension ImportViewController: TagsTokenViewControllerDelegate {
+    func tagsDidChanged(_ tags: [TagMO]) {
+        // Add tags to the selected items whenever changed
+        tagSelectedItems(with: tags)
+    }
     
-    private func tagSelectedItems(with tags: [String]) {
+    func tagsEditingEnded() {
+        // Reload items to display tag icon if item has tags
+        thumbnailView.reloadItems(at: thumbnailView.selectionIndexPaths)
+    }
+    
+    private func tagSelectedItems(with tags: [TagMO]) {
         let selectedIndexPaths = thumbnailView.selectionIndexPaths
         
         guard !selectedIndexPaths.isEmpty else { return }
@@ -297,34 +343,10 @@ extension ImportViewController: NSCollectionViewDelegate {
     }
 }
 
-extension ImportViewController: NSTokenFieldDelegate {
-    func tokenField(_ tokenField: NSTokenField, completionsForSubstring substring: String, indexOfToken tokenIndex: Int, indexOfSelectedItem selectedIndex: UnsafeMutablePointer<Int>?) -> [Any]? {
-        return validKeywords.filter {
-            $0.lowercased().hasPrefix(substring.lowercased())
-        }
-    }
-    
-    func tokenField(_ tokenField: NSTokenField, shouldAdd tokens: [Any], at index: Int) -> [Any] {
-        let keywordsToAdd = tokens.compactMap { $0 as? String }
-        return keywordsToAdd.filter { validKeywords.contains($0) }
-    }
-    
-    func controlTextDidEndEditing(_ obj: Notification) {
-        guard let tokenField = obj.object as? NSTokenField else { return }
-        let filtered = filteredKeywords(from: tokenField)
-        tokenField.objectValue = filtered
-        
-        thumbnailView.reloadItems(at: thumbnailView.selectionIndexPaths)
-    }
-    
-    func controlTextDidChange(_ obj: Notification) {
-        guard let tokenField = obj.object as? NSTokenField else { return }
-        let filtered = filteredKeywords(from: tokenField)
-        tagSelectedItems(with: filtered)
-    }
-    
-    func filteredKeywords(from tokenField: NSTokenField) -> [String] {
-        guard let words = tokenField.objectValue as? [String] else { return [] }
-        return words.filter { validKeywords.contains($0) }
+extension ImportViewController: SelectDealerViewControllerDelegate {
+    func didSelectDealer(_ dealer: DealerMO) {
+        print(dealer.name)
+        selectedDealer = dealer
+        performSegue(withIdentifier: .importProgressVC, sender: nil)
     }
 }

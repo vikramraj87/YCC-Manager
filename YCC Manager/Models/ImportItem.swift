@@ -9,10 +9,15 @@
 import Cocoa
 
 struct ImportItem {
-    var imageURLs: [URL]
-    var tags: [String]
+    var imageURLs: [URL] {
+        didSet {
+            clearThumbnailsCache()
+        }
+    }
+    var tags: [TagMO]
+    var thumbnails: [NSImage]?
     
-    init(imageURLs: [URL], tags: [String]) {
+    init(imageURLs: [URL], tags: [TagMO]) {
         self.imageURLs = imageURLs
         self.tags = tags
     }
@@ -49,6 +54,10 @@ struct ImportItem {
     func contains(_ url: URL) -> Bool {
         return imageURLs.contains(url)
     }
+    
+    mutating func clearThumbnailsCache() {
+        thumbnails = nil
+    }
 }
 
 
@@ -56,12 +65,12 @@ extension Collection where Element == ImportItem {
     var canMerge: Bool {
         guard count > 1 else { return false }
         
-        let tags = first!.tags.sorted()
+        let tags = Set(first!.tags)
         
         for item in self {
             if item.hasMultipleImages { return false }
             
-            if item.tags.sorted() != tags { return false }
+            if Set(item.tags) != tags { return false }
         }
         
         return true
@@ -76,16 +85,16 @@ extension Collection where Element == ImportItem {
     var hasSameTags: Bool {
         guard count > 1 else { return true }
         
-        let tags = first!.tags.sorted()
+        let tags = Set(first!.tags)
         
         for item in self {
-            if item.tags.sorted() != tags { return false }
+            if Set(item.tags) != tags { return false }
         }
         
         return true
     }
     
-    var tags: [String] {
+    var tags: [TagMO] {
         guard hasSameTags else { return [] }
         
         guard let firstItem = first else { return [] }

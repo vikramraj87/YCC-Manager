@@ -159,6 +159,7 @@ extension TagsViewController: EditTagViewControllerDelegate {
         do {
             isDuplicate = try duplicateChecker.isDuplicateValue(name, objectUpdated: tag)
         } catch {
+            // TODO: Notify users of these errors.
             print("Error checking for duplicate tag: \(error)")
         }
         return isDuplicate

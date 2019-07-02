@@ -15,10 +15,13 @@ public class DealerMO: NSManagedObject {
     public override func awakeFromInsert() {
         setPrimitiveValue(Date(), forKey: "createdAt")
     }
-}
-
-extension DealerMO: UniqueObject {
-    var uniquePredicate: NSPredicate {
-        return NSPredicate(format: "mobileNumber ==[c] %@", self.mobileNumber)
+    
+    static var nameSortedFetchRequest: NSFetchRequest<DealerMO> {
+        let fetchRequest: NSFetchRequest<DealerMO> = DealerMO.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(keyPath: \DealerMO.name, ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        return fetchRequest
     }
 }
+
+

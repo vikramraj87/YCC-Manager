@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import CoreData
+
 @testable import YCC_Manager
 
 class ImportItemTests: XCTestCase {
@@ -22,11 +24,47 @@ class ImportItemTests: XCTestCase {
     let url5 = URL(fileURLWithPath: "/home/jewel5.jpg")
     let url6 = URL(fileURLWithPath: "/home/jewel6.jpg")
     
+    var container: NSPersistentContainer!
+    
+    var tag1: TagMO!
+    var tag2: TagMO!
+    var tag3: TagMO!
+    var tag4: TagMO!
+    var tag5: TagMO!
+    var tag6: TagMO!
+    var tagUno: TagMO!
+    var tagDio: TagMO!
+    var tagTrio: TagMO!
+    
     override func setUp() {
         item1 = ImportItem(imageURL: url1)
         item2 = ImportItem(imageURL: url2)
         item3 = ImportItem(imageURL: url3)
         item4 = ImportItem(imageURLs: [url4, url5, url6])
+        
+        container = NSPersistentContainer.testContainer()
+        
+        tag1 = TagMO(context: container.viewContext)
+        tag2 = TagMO(context: container.viewContext)
+        tag3 = TagMO(context: container.viewContext)
+        tag4 = TagMO(context: container.viewContext)
+        tag5 = TagMO(context: container.viewContext)
+        tag6 = TagMO(context: container.viewContext)
+        tagUno = TagMO(context: container.viewContext)
+        tagDio = TagMO(context: container.viewContext)
+        tagTrio = TagMO(context: container.viewContext)
+        
+        tag1.tag = "One"
+        tag2.tag = "Two"
+        tag3.tag = "Three"
+        tag4.tag = "Four"
+        tag5.tag = "Five"
+        tag6.tag = "Six"
+        tagUno.tag = "Uno"
+        tagDio.tag = "Dio"
+        tagTrio.tag = "Trio"
+        
+        try! container.viewContext.save()
     }
 
     func testHasMultipleImages() {
@@ -53,35 +91,35 @@ class ImportItemTests: XCTestCase {
     }
     
     func testMergeWithSingleURLItems() {
-        item1.tags = ["One", "Two", "Three"]
-        item2.tags = ["Three", "Four", "Five"]
-        item3.tags = ["Four", "Five", "Six"]
+        item1.tags = [tag1, tag2, tag3]
+        item2.tags = [tag3, tag4, tag5]
+        item3.tags = [tag4, tag5, tag6]
         
         item1.merge(with: [item2, item3])
         XCTAssertEqual(item1.imageURLs, [url1, url2, url3])
-        XCTAssertEqual(item1.tags, ["One", "Two", "Three"])
+        XCTAssertEqual(item1.tags, [tag1, tag2, tag3])
     }
     
     func testMergeWithMultipleURLItems() {
-        item1.tags = ["One", "Two", "Three"]
-        item4.tags = ["Four", "Five", "Six"]
+        item1.tags = [tag1, tag2, tag3]
+        item4.tags = [tag4, tag5, tag6]
         
         item1.merge(with: [item4])
         XCTAssertEqual(item1.imageURLs, [url1, url4, url5, url6])
-        XCTAssertEqual(item1.tags, ["One", "Two", "Three"])
+        XCTAssertEqual(item1.tags, [tag1, tag2, tag3])
     }
     
     func testUnmerge() {
-        item4.tags = ["Four", "Five", "Six"]
+        item4.tags = [tag4, tag5, tag6]
         
         let unmergedItems = item4.unmerge()
         XCTAssertEqual(item4.imageURLs, [url4])
         XCTAssertEqual(unmergedItems[0].imageURLs, [url5])
         XCTAssertEqual(unmergedItems[1].imageURLs, [url6])
         
-        XCTAssertEqual(item4.tags, ["Four", "Five", "Six"])
-        XCTAssertEqual(unmergedItems[0].tags, ["Four", "Five", "Six"])
-        XCTAssertEqual(unmergedItems[1].tags, ["Four", "Five", "Six"])
+        XCTAssertEqual(item4.tags, [tag4, tag5, tag6])
+        XCTAssertEqual(unmergedItems[0].tags, [tag4, tag5, tag6])
+        XCTAssertEqual(unmergedItems[1].tags, [tag4, tag5, tag6])
     }
     
     func testItemsCollectionMergeWithZeroOrOneItem() {
@@ -97,9 +135,9 @@ class ImportItemTests: XCTestCase {
         XCTAssertEqual([item1, item2].canMerge, true)
         XCTAssertEqual([item2, item3].canMerge, true)
 
-        item1.tags = ["One", "Uno"]
-        item2.tags = ["Uno", "One"]
-        item3.tags = ["Uno", "One"]
+        item1.tags = [tag1, tagUno]
+        item2.tags = [tagUno, tag1]
+        item3.tags = [tagUno, tag1]
 
         XCTAssertEqual([item1, item2, item3].canMerge, true)
         XCTAssertEqual([item1, item2].canMerge, true)
@@ -107,9 +145,9 @@ class ImportItemTests: XCTestCase {
     }
 
     func testItemsCollectionWithDifferentTagsCannotMerge() {
-        let tags1 = ["One", "Uno"]
-        let tags2 = ["Two", "Duo"]
-        let tags3 = ["Three", "Trio"]
+        let tags1 = [tag1!, tagUno!]
+        let tags2 = [tag2!, tagDio!]
+        let tags3 = [tag3!, tagTrio!]
 
         item1.tags = tags1
         item2.tags = tags2
@@ -137,19 +175,19 @@ class ImportItemTests: XCTestCase {
     }
     
     func testItemsCollectionHasDifferentTags() {
-        item1.tags = ["One", "Uno"]
-        item2.tags = ["Uno", "One"]
-        item3.tags = ["Uno", "One"]
-        item4.tags = ["Two", "Duo"]
+        item1.tags = [tag1, tagUno]
+        item2.tags = [tagUno, tag1]
+        item3.tags = [tagUno, tag1]
+        item4.tags = [tag2, tagDio]
         
         XCTAssertFalse([item1, item2, item3, item4].hasSameTags)
     }
     
     func testItemsCollectionHasSameTags() {
-        item1.tags = ["One", "Uno"]
-        item2.tags = ["Uno", "One"]
-        item3.tags = ["Uno", "One"]
-        item4.tags = ["One", "Uno"]
+        item1.tags = [tag1, tagUno]
+        item2.tags = [tagUno, tag1]
+        item3.tags = [tagUno, tag1]
+        item4.tags = [tag1, tagUno]
         
         XCTAssertTrue([item1, item2, item3, item4].hasSameTags)
     }
@@ -160,26 +198,26 @@ class ImportItemTests: XCTestCase {
     }
     
     func testItemsCollectionReturnTagsWhenCollectionHasOneItem() {
-        item2.tags = ["Uno", "One"]
-        XCTAssertEqual([item2].tags, ["Uno", "One"])
+        item2.tags = [tagUno, tag1]
+        XCTAssertEqual([item2].tags, [tagUno, tag1])
     }
     
     func testItemsCollectionReturnEmptyTagsWhenNotMatched() {
-        item1.tags = ["One", "Uno"]
-        item2.tags = ["Uno", "One"]
-        item3.tags = ["Uno", "One"]
-        item4.tags = ["Two", "Duo"]
+        item1.tags = [tag1, tagUno]
+        item2.tags = [tagUno, tag1]
+        item3.tags = [tagUno, tag1]
+        item4.tags = [tag2, tagDio]
         
         XCTAssertTrue([item1, item2, item3, item4].tags.isEmpty)
     }
     
     func testItemsCollectionReturnFirstItemTagsWhenMatched() {
-        item1.tags = ["One", "Uno"]
-        item2.tags = ["Uno", "One"]
-        item3.tags = ["Uno", "One"]
-        item4.tags = ["Uno", "One"]
+        item1.tags = [tag1, tagUno]
+        item2.tags = [tagUno, tag1]
+        item3.tags = [tagUno, tag1]
+        item4.tags = [tagUno, tag1]
         
-        XCTAssertEqual([item1, item2, item3, item4].tags, ["One", "Uno"])
+        XCTAssertEqual([item1, item2, item3, item4].tags, [tag1, tagUno])
     }
     
     func testItemsCollectionWithNoItemsCanTag() {
@@ -193,19 +231,19 @@ class ImportItemTests: XCTestCase {
     }
     
     func testItemsCollectionWithSameTagsCanTag() {
-        item1.tags = ["One", "Uno"]
-        item2.tags = ["Uno", "One"]
-        item3.tags = ["Uno", "One"]
-        item4.tags = ["One", "Uno"]
+        item1.tags = [tag1, tagUno]
+        item2.tags = [tagUno, tag1]
+        item3.tags = [tagUno, tag1]
+        item4.tags = [tag1, tagUno]
         
         XCTAssertTrue([item1, item2, item3, item4].canTag)
     }
     
     func testItemsCollectionWithDifferentTagsCannotTag() {
-        item1.tags = ["One", "Uno"]
-        item2.tags = ["Uno", "One"]
-        item3.tags = ["Uno", "One"]
-        item4.tags = ["Two", "Duo"]
+        item1.tags = [tag1, tagUno]
+        item2.tags = [tagUno, tag1]
+        item3.tags = [tagUno, tag1]
+        item4.tags = [tag2, tagDio]
         
         XCTAssertFalse([item1, item2, item3, item4].canTag)
     }

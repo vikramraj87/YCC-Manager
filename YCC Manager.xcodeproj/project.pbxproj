@@ -10,6 +10,7 @@
 		AC1AAF2C22C3D2B100CCCECC /* DealerMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1AAF2A22C3D2B100CCCECC /* DealerMO+CoreDataClass.swift */; };
 		AC1AAF2D22C3D2B100CCCECC /* DealerMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1AAF2B22C3D2B100CCCECC /* DealerMO+CoreDataProperties.swift */; };
 		AC1AAF2F22C3D73800CCCECC /* DuplicateChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1AAF2E22C3D73800CCCECC /* DuplicateChecker.swift */; };
+		AC1AAF3122C44B4700CCCECC /* TagsTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1AAF3022C44B4700CCCECC /* TagsTokenViewController.swift */; };
 		AC1CF68122C2845E004995D6 /* UniqueObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1CF68022C2845E004995D6 /* UniqueObject.swift */; };
 		AC1CF68322C2F741004995D6 /* NSAlert+showInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1CF68222C2F741004995D6 /* NSAlert+showInfo.swift */; };
 		AC20A5AB22BF9814006E519A /* TagMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20A5A422BF9814006E519A /* TagMO+CoreDataClass.swift */; };
@@ -124,6 +125,8 @@
 		AC781BB722C3C68F00D4EA53 /* DealerMOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC781BB622C3C68F00D4EA53 /* DealerMOTests.swift */; };
 		AC7E82D722B7C8F000E9F327 /* YCCData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC7E82D522B7C8F000E9F327 /* YCCData.xcdatamodeld */; };
 		AC7E82D922B7C8FF00E9F327 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7E82D822B7C8FF00E9F327 /* DataController.swift */; };
+		ACA3C90622C8E37200A1C170 /* SelectDealerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA3C90522C8E37200A1C170 /* SelectDealerViewController.swift */; };
+		ACA3C90822CA47B300A1C170 /* ImportProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA3C90722CA47B300A1C170 /* ImportProgressViewController.swift */; };
 		ACC7129722799391002C1471 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7129622799391002C1471 /* AppDelegate.swift */; };
 		ACC7129922799391002C1471 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7129822799391002C1471 /* ViewController.swift */; };
 		ACC7129B22799393002C1471 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC7129A22799393002C1471 /* Assets.xcassets */; };
@@ -154,6 +157,7 @@
 		AC1AAF2A22C3D2B100CCCECC /* DealerMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DealerMO+CoreDataClass.swift"; path = "YCC Manager/Core Data/ManagedObjects/DealerMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AC1AAF2B22C3D2B100CCCECC /* DealerMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DealerMO+CoreDataProperties.swift"; path = "YCC Manager/Core Data/ManagedObjects/DealerMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AC1AAF2E22C3D73800CCCECC /* DuplicateChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateChecker.swift; sourceTree = "<group>"; };
+		AC1AAF3022C44B4700CCCECC /* TagsTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsTokenViewController.swift; sourceTree = "<group>"; };
 		AC1CF68022C2845E004995D6 /* UniqueObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueObject.swift; sourceTree = "<group>"; };
 		AC1CF68222C2F741004995D6 /* NSAlert+showInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAlert+showInfo.swift"; sourceTree = "<group>"; };
 		AC20A5A422BF9814006E519A /* TagMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TagMO+CoreDataClass.swift"; path = "YCC Manager/Core Data/ManagedObjects/TagMO+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -271,6 +275,8 @@
 		AC78B28E22AFE27300454396 /* TODO_Next.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO_Next.md; sourceTree = "<group>"; };
 		AC7E82D622B7C8F000E9F327 /* YCCData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YCCData.xcdatamodel; sourceTree = "<group>"; };
 		AC7E82D822B7C8FF00E9F327 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		ACA3C90522C8E37200A1C170 /* SelectDealerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDealerViewController.swift; sourceTree = "<group>"; };
+		ACA3C90722CA47B300A1C170 /* ImportProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportProgressViewController.swift; sourceTree = "<group>"; };
 		ACC7129322799391002C1471 /* YCC Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YCC Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC7129622799391002C1471 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACC7129822799391002C1471 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -440,6 +446,9 @@
 				AC6BF04D22B699C3002FFFB3 /* DealersViewController.swift */,
 				AC20A5B122BFD83E006E519A /* TagsViewController.swift */,
 				AC5DDBC022C1AC7E005D3026 /* EditTagViewController.swift */,
+				AC1AAF3022C44B4700CCCECC /* TagsTokenViewController.swift */,
+				ACA3C90522C8E37200A1C170 /* SelectDealerViewController.swift */,
+				ACA3C90722CA47B300A1C170 /* ImportProgressViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -817,10 +826,12 @@
 				AC1AAF2C22C3D2B100CCCECC /* DealerMO+CoreDataClass.swift in Sources */,
 				AC65170522BDC564006C1B29 /* TableViewFetchedResultsControllerDataSource.swift in Sources */,
 				AC4C985A229B74D80081631C /* FilterableTableViewController.swift in Sources */,
+				ACA3C90822CA47B300A1C170 /* ImportProgressViewController.swift in Sources */,
 				ACC7129922799391002C1471 /* ViewController.swift in Sources */,
 				AC3C8F8222A5F28E00F95EDA /* MultipleThumbnailPreviewViewController.swift in Sources */,
 				AC1AAF2D22C3D2B100CCCECC /* DealerMO+CoreDataProperties.swift in Sources */,
 				AC20A5AD22BF9814006E519A /* Jewel+CoreDataClass.swift in Sources */,
+				AC1AAF3122C44B4700CCCECC /* TagsTokenViewController.swift in Sources */,
 				AC48A94222A1FC5E000B3DD7 /* MultipleThumbnailItem.swift in Sources */,
 				AC48A8A0229D67C5000B3DD7 /* FilterableContentCellView.swift in Sources */,
 				AC5DDBC122C1AC7E005D3026 /* EditTagViewController.swift in Sources */,
@@ -831,6 +842,7 @@
 				AC7E82D922B7C8FF00E9F327 /* DataController.swift in Sources */,
 				AC3C8F7F22A5F1C600F95EDA /* SingleThumbnailItem.swift in Sources */,
 				AC74582A22B5F96F00F9BB07 /* IntegerOnlyFormatter.swift in Sources */,
+				ACA3C90622C8E37200A1C170 /* SelectDealerViewController.swift in Sources */,
 				AC20A5B222BFD83E006E519A /* TagsViewController.swift in Sources */,
 				AC74582822B5F2F500F9BB07 /* EditDealerViewController.swift in Sources */,
 				AC1CF68322C2F741004995D6 /* NSAlert+showInfo.swift in Sources */,

@@ -43,6 +43,13 @@ class TableViewFetchedResultsControllerDataSource<T: NSManagedObject>: NSObject,
         tableView.dataSource = self
     }
     
+    func applyPredicate(_ predicate: NSPredicate?) throws {
+        NSFetchedResultsController<DealerMO>.deleteCache(withName: nil)
+        fetchedResultsController.fetchRequest.predicate = predicate
+        try fetchedResultsController.performFetch()
+        tableView.reloadData()
+    }
+    
     func numberOfRows(in tableView: NSTableView) -> Int {
         return fetchedResultsController.sections?.first?.numberOfObjects ?? 0
     }

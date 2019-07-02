@@ -53,10 +53,7 @@ class DealersViewController: NSViewController {
     }
     
     private func configDataSource() {
-        // Configure fetch request
-        let fetchRequest: NSFetchRequest<DealerMO> = DealerMO.fetchRequest()
-        let sortDescriptor = NSSortDescriptor(keyPath: \DealerMO.name, ascending: true)
-        fetchRequest.sortDescriptors = [sortDescriptor]
+        let fetchRequest = DealerMO.nameSortedFetchRequest
         
         // Get context
         let context = DataController.shared.viewContext
