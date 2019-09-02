@@ -26,6 +26,10 @@ class DataController {
     
     private init() {
         persistentContainer = NSPersistentContainer(name: "YCCData")
+        
+        let description = NSPersistentStoreDescription(url: FileService.shared.dbURL)
+        persistentContainer.persistentStoreDescriptions = [description]
+        
         persistentContainer.loadPersistentStores { [weak self] storeDescription, error in
             if let error = error {
                 print("Cannot load stores due to error: \(error)")

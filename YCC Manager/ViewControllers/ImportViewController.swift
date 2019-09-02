@@ -39,7 +39,7 @@ class ImportViewController: NSViewController {
     
     var tagsTokenViewController: TagsTokenViewController!
     
-    var selectedItems: [ImportItem] { items(at: thumbnailView.selectionIndexPaths) }
+    var selectedItems: [ImportItem] { return items(at: thumbnailView.selectionIndexPaths) }
     
     var selectedDealer: DealerMO?
     

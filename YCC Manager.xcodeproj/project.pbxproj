@@ -120,6 +120,7 @@
 		AC71506B22B407DB00B7746E /* ImportItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71506A22B407DB00B7746E /* ImportItemTests.swift */; };
 		AC74582822B5F2F500F9BB07 /* EditDealerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC74582722B5F2F500F9BB07 /* EditDealerViewController.swift */; };
 		AC74582A22B5F96F00F9BB07 /* IntegerOnlyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC74582922B5F96F00F9BB07 /* IntegerOnlyFormatter.swift */; };
+		AC77F882231CDDFA000B8FBD /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC77F881231CDDFA000B8FBD /* FileService.swift */; };
 		AC781BB122C3B2AC00D4EA53 /* TestPersistingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC781BB022C3B2AC00D4EA53 /* TestPersistingContainer.swift */; };
 		AC781BB522C3BFDD00D4EA53 /* TagMOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC781BB422C3BFDD00D4EA53 /* TagMOTests.swift */; };
 		AC781BB722C3C68F00D4EA53 /* DealerMOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC781BB622C3C68F00D4EA53 /* DealerMOTests.swift */; };
@@ -269,6 +270,8 @@
 		AC71506A22B407DB00B7746E /* ImportItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportItemTests.swift; sourceTree = "<group>"; };
 		AC74582722B5F2F500F9BB07 /* EditDealerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDealerViewController.swift; sourceTree = "<group>"; };
 		AC74582922B5F96F00F9BB07 /* IntegerOnlyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegerOnlyFormatter.swift; sourceTree = "<group>"; };
+		AC77F87F231C26D6000B8FBD /* YCC Manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "YCC Manager.entitlements"; sourceTree = "<group>"; };
+		AC77F881231CDDFA000B8FBD /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
 		AC781BB022C3B2AC00D4EA53 /* TestPersistingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPersistingContainer.swift; sourceTree = "<group>"; };
 		AC781BB422C3BFDD00D4EA53 /* TagMOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagMOTests.swift; sourceTree = "<group>"; };
 		AC781BB622C3C68F00D4EA53 /* DealerMOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealerMOTests.swift; sourceTree = "<group>"; };
@@ -469,6 +472,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		AC77F880231CDDE8000B8FBD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AC77F881231CDDFA000B8FBD /* FileService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		AC781BB222C3BF9900D4EA53 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -552,6 +563,8 @@
 		ACC7129522799391002C1471 /* YCC Manager */ = {
 			isa = PBXGroup;
 			children = (
+				AC77F880231CDDE8000B8FBD /* Services */,
+				AC77F87F231C26D6000B8FBD /* YCC Manager.entitlements */,
 				AC7E82D422B7C8CB00E9F327 /* Core Data */,
 				AC6779D622B1CF0000C902D9 /* Utilities */,
 				AC78B28F22AFE4C000454396 /* Operations */,
@@ -674,6 +687,11 @@
 					ACC7129222799391002C1471 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1100;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					ACC712A422799393002C1471 = {
 						CreatedOnToolsVersion = 10.1;
@@ -820,6 +838,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC20A5AC22BF9814006E519A /* TagMO+CoreDataProperties.swift in Sources */,
+				AC77F882231CDDFA000B8FBD /* FileService.swift in Sources */,
 				AC1CF68122C2845E004995D6 /* UniqueObject.swift in Sources */,
 				AC6779D822B1CF2C00C902D9 /* ImageDownSampler.swift in Sources */,
 				AC6BF04E22B699C3002FFFB3 /* DealersViewController.swift in Sources */,
@@ -958,7 +977,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1013,7 +1032,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -1026,7 +1045,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "YCC Manager/YCC_Manager.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1035,9 +1053,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kivi.YCC-Manager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1045,7 +1064,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "YCC Manager/YCC_Manager.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1054,9 +1072,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kivi.YCC-Manager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

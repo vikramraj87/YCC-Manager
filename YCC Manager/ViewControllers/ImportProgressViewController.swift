@@ -36,15 +36,13 @@ class ImportProgressViewController: NSViewController {
     }
     
     func performImport() {
-        guard items.count > 0 else {
-            print("Items empty")
+        guard items.count > 0 ,
+            let dealer = selectedDealer else {
+            print("Items empty/Dealer nil")
             return
         }
         
-        guard let dealer = selectedDealer else {
-            print("Dealer nil")
-            return
-        }
+        
         
         for (idx, item) in items.enumerated() {
             progressStatusLabel.stringValue = "Importing Jewel \(idx + 1)/\(items.count)"

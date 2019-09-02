@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import Combine
 
 class MultipleThumbnailItem: NSCollectionViewItem {
     @IBOutlet private weak var thumbnailView: ImagesStackView!
